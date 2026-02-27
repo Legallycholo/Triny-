@@ -1,0 +1,104 @@
+"use client"
+
+import Image from "next/image"
+import { Phone, MessageCircle, Instagram, MapPin } from "lucide-react"
+import ScrollAnimate from "@/components/ui/scroll-animate"
+
+export default function Footer() {
+  return (
+    <footer className="bg-zinc-950">
+      {/* Final CTA Section */}
+      <section className="relative overflow-hidden border-b border-zinc-800 py-20 lg:py-28">
+        {/* Background accent */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(124,58,237,0.08)_0%,_transparent_60%)]" />
+
+        <div className="relative mx-auto max-w-4xl px-4 text-center lg:px-8">
+          <ScrollAnimate>
+            <h2 className="font-serif text-4xl font-bold leading-tight text-cream text-balance sm:text-5xl lg:text-6xl">
+              Transform Your{" "}
+              <span className="text-champagne">Image</span>{" "}
+              Today.
+            </h2>
+            <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-cream/60">
+              {"Your journey to healthier, more beautiful hair starts with a single call. Let Triny show you why every client leaves feeling "}
+              <span className="italic text-champagne/80">consentida</span>.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <a
+                href="tel:787-964-1826"
+                className="btn-glow flex items-center gap-2.5 rounded-full px-10 py-4 text-lg font-semibold tracking-wide"
+              >
+                <Phone className="h-5 w-5" />
+                <span>Call Now: 787-964-1826</span>
+              </a>
+            </div>
+
+            {/* Alternative Contact */}
+            <div className="mt-6 flex items-center justify-center gap-6">
+              <a
+                href="sms:787-964-1826"
+                className="flex items-center gap-2 text-sm text-cream/50 transition-colors hover:text-champagne"
+              >
+                <MessageCircle className="h-4 w-4" />
+                <span>Text Us</span>
+              </a>
+              <span className="text-cream/20">|</span>
+              <a
+                href="https://www.instagram.com/triny_dominicansalon/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm text-cream/50 transition-colors hover:text-champagne"
+              >
+                <Instagram className="h-4 w-4" />
+                <span>DM on Instagram</span>
+              </a>
+            </div>
+          </ScrollAnimate>
+        </div>
+      </section>
+
+      {/* Footer Info */}
+      <div className="mx-auto max-w-7xl px-4 py-10 lg:px-8">
+        <div className="flex flex-col items-center gap-6 text-center md:flex-row md:justify-between md:text-left">
+          {/* Logo & Brand */}
+          <div className="flex items-center gap-3">
+            <Image
+              src="/images/triny-logo.png"
+              alt="Consentida's Dominican Hair Salon by Triny"
+              width={40}
+              height={40}
+              className="rounded-full"
+              loading="lazy"
+            />
+            <div>
+              <p className="font-serif text-sm font-semibold text-cream">
+                {"Consentida's Dominican Hair Salon"}
+              </p>
+              <p className="text-xs text-cream/40">by Triny</p>
+            </div>
+          </div>
+
+          {/* Address & Contact */}
+          <div className="flex flex-col items-center gap-2 md:items-end">
+            <div className="flex items-center gap-1.5 text-xs text-cream/40">
+              <MapPin className="h-3 w-3" />
+              <span>Stone Mountain, GA</span>
+            </div>
+            <p className="font-mono text-xs tracking-wide text-cream/30">
+              Licensed Professional &middot; 787-964-1826
+            </p>
+          </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="mt-8 border-t border-zinc-800 pt-6 text-center">
+          <p className="text-xs text-cream/25">
+            {`\u00A9 ${new Date().getFullYear()} Consentida's Dominican Hair Salon by Triny. All rights reserved.`}
+          </p>
+        </div>
+      </div>
+    </footer>
+  )
+}

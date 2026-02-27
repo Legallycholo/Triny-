@@ -1,32 +1,44 @@
-import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import type { Metadata, Viewport } from 'next'
+import { Geist, Geist_Mono, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const _geist = Geist({ subsets: ["latin"] })
+const _geistMono = Geist_Mono({ subsets: ["latin"] })
+const _playfair = Playfair_Display({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800", "900"] })
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+  title: "Consentida's Dominican Hair Salon by Triny | Stone Mountain, GA",
+  description:
+    "Premium Dominican hair salon in Stone Mountain, GA. 21+ years of editorial excellence. Hair color, blowouts, keratin treatments, scalp restoration & more. Call now: 787-964-1826",
+  keywords: [
+    "Dominican hair salon",
+    "Stone Mountain GA",
+    "hair color specialist",
+    "Dominican blowout",
+    "keratin treatment",
+    "scalp restoration",
+    "Triny hair salon",
+    "Consentidas",
+  ],
+  openGraph: {
+    title: "Consentida's Dominican Hair Salon by Triny",
+    description: "The World of Color in Stone Mountain. 21+ years of editorial excellence.",
+    type: "website",
+    locale: "en_US",
   },
+  icons: {
+    icon: "/images/triny-logo.png",
+    apple: "/images/triny-logo.png",
+  },
+}
+
+export const viewport: Viewport = {
+  themeColor: "#09090B",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
 }
 
 export default function RootLayout({
