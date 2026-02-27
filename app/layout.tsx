@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   keywords: [
     "Beauty Salon",
     " Hair Salon",
-    "Hairdresser",
+    "Hair Coloring",
   ],
   openGraph: {
     title: "BEST Dominican Beauty Salon in Stone Mountain GA | Consentida's by Triny",
