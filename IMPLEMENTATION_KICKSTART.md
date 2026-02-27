@@ -395,7 +395,7 @@ A premium, luxury-focused landing page showcasing Triny's professional hair and 
 
 1. **User Provides Assets:**
    - Triny's professional portrait
-   - Before/after transformation images (3 pairs minimum)
+   - Before/after transformation images (2 pairs minimum)
    - Any additional FAQ content
 
 2. **Implementation Begins:**
