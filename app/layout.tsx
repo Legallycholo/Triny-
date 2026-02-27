@@ -50,7 +50,7 @@ export default function RootLayout({
     image: "https://consentidassalon.com/images/triny-logo.png",
     description: "Premium Dominican hair salon with 21+ years of expertise in hair coloring, blowouts, silk press, keratin treatments, and scalp restoration.",
     telephone: "787-964-1826",
-    email: "info@consentidassalon.com",
+    email: "tomyglarydary@yahoo.com",
     address: {
       "@type": "PostalAddress",
       streetAddress: "5226 Stone Mountain Hwy Suite D",
