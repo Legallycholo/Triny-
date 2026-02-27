@@ -12,7 +12,7 @@ export default function Footer() {
       {/* Final CTA Section */}
       <section className="relative overflow-hidden border-b border-zinc-800 py-20 lg:py-28">
         {/* Background accent */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(124,58,237,0.08)_0%,_transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(124,58,237,0.08)_0%,transparent_60%)]" />
 
         <div className="relative mx-auto max-w-4xl px-4 text-center lg:px-8">
           <ScrollAnimate>

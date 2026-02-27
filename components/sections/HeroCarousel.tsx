@@ -45,7 +45,7 @@ export default function HeroCarousel() {
         }}
         loop
         speed={800}
-        className="aspect-[3/4] w-full sm:aspect-[4/5] lg:aspect-[3/4]"
+        className="aspect-3/4 w-full sm:aspect-4/5 lg:aspect-3/4"
       >
         {PORTFOLIO_IMAGES.map((image, index) => (
           <SwiperSlide key={image.src}>
@@ -60,7 +60,7 @@ export default function HeroCarousel() {
                 loading={index === 0 ? "eager" : "lazy"}
               />
               {/* Gradient overlay at bottom */}
-              <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-zinc-950/60 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-zinc-950/60 to-transparent" />
             </div>
           </SwiperSlide>
         ))}
