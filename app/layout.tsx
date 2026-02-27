@@ -12,7 +12,7 @@ const _playfair = Playfair_Display({ subsets: ["latin"], weight: ["400", "500", 
 export const metadata: Metadata = {
   title: "BEST Dominican Beauty Salon in Stone Mountain GA | Blowouts, Silk Press & Hair Coloring Near Me",
   description:
-    "Consentida's Dominican Hair Salon by Triny: Premium hair salon at 5226 Stone Mountain Hwy, Stone Mountain GA 30087. 21+ years of expertise in hair coloring, Dominican blowouts, silk press, keratin treatments, scalp restoration & editorial hair styling. Call 787-964-1826.",
+    "Consentida's Dominican Hair Salon by Triny: Premium hair salon at 5226 Stone Mountain Hwy, Stone Mountain GA 30087. 21+ years of expertise in hair coloring, Dominican blowouts, silk press, keratin treatments, scalp restoration & hair styling. Call 787-964-1826.",
   keywords: [
     "Beauty Salon",
   ],
