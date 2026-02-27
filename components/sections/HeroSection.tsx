@@ -9,10 +9,8 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen bg-zinc-950 pt-20 lg:pt-0"
+      className="relative min-h-screen pt-20 lg:pt-0"
     >
-      {/* Background texture */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(212,175,55,0.05)_0%,_transparent_50%)]" />
 
       <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center gap-8 px-4 py-12 lg:flex-row lg:gap-12 lg:px-8">
         {/* Text Content - Mobile: first, Desktop: left */}
@@ -31,9 +29,15 @@ export default function HeroSection() {
           </h1>
 
           {/* Sub-headline */}
-          <p className="mt-5 max-w-lg text-base leading-relaxed text-pretty sm:text-lg" style={{ color: "rgba(245, 245, 240, 0.7)" }}>
-            {"Triny: Professional Artistry, Full-Service Haircare, and Clinical Scalp Restoration. Where every client is "}
-            <span className="italic" style={{ color: "rgba(212, 175, 55, 0.9)" }}>consentida</span>
+          <p className="mt-5 max-w-lg text-base leading-relaxed text-pretty sm:text-lg" style={{ color: "rgba(245, 245, 240, 0.75)" }}>
+            {"Triny: "}
+            <span className="kw-gold">Professional Artistry</span>
+            {", "}
+            <span className="kw-violet">Full-Service Haircare</span>
+            {", and "}
+            <span className="kw-gold">Clinical Scalp Restoration</span>
+            {". Where every client is "}
+            <span className="kw-violet">consentida</span>
             {" \u2014 spoiled with care."}
           </p>
 

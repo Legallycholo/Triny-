@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { Scissors, Palette, Sparkles, Hand, Eye, Gem, Phone, HelpCircle } from "lucide-react"
+import { useCTA } from "@/components/providers/cta-provider"
 import ScrollAnimate from "@/components/ui/scroll-animate"
 
 const SERVICE_CATEGORIES = [
