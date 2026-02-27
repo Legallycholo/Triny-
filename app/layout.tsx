@@ -8,7 +8,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 const _playfair = Playfair_Display({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800", "900"] })
 
 export const metadata: Metadata = {
-  title: "Consentida's Dominican Hair Salon by Triny | Stone Mountain, GA",
+  title: "BEST Beauty Salon in Stone Mountain GA. Dominican Blowouts, Silk Press & Hair Coloring Near Me",
   description:
     "Premium Dominican hair salon in Stone Mountain, GA. 21+ years of editorial excellence. Hair color, blowouts, keratin treatments, scalp restoration & more. Call now: 787-964-1826",
   keywords: [
