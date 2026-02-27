@@ -2,9 +2,11 @@
 
 import Image from "next/image"
 import { Phone, MessageCircle, Instagram, MapPin } from "lucide-react"
+import { useCTA } from "@/components/providers/cta-provider"
 import ScrollAnimate from "@/components/ui/scroll-animate"
 
 export default function Footer() {
+  const { openCTA } = useCTA()
   return (
     <footer className="bg-zinc-950">
       {/* Final CTA Section */}
@@ -14,46 +16,50 @@ export default function Footer() {
 
         <div className="relative mx-auto max-w-4xl px-4 text-center lg:px-8">
           <ScrollAnimate>
-            <h2 className="font-serif text-4xl font-bold leading-tight text-cream text-balance sm:text-5xl lg:text-6xl">
-              Transform Your{" "}
-              <span className="text-champagne">Image</span>{" "}
-              Today.
-            </h2>
-            <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-cream/60">
-              {"Your journey to healthier, more beautiful hair starts with a single call. Let Triny show you why every client leaves feeling "}
-              <span className="italic text-champagne/80">consentida</span>.
-            </p>
+          <h2 className="font-serif text-4xl font-bold leading-tight text-balance sm:text-5xl lg:text-6xl" style={{ color: "rgb(245, 245, 240)" }}>
+            Transform Your{" "}
+            <span style={{ color: "rgb(212, 175, 55)" }}>Image</span>{" "}
+            Today.
+          </h2>
+          <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed" style={{ color: "rgba(245, 245, 240, 0.6)" }}>
+            {"Your journey to healthier, more beautiful hair starts with a single call. Let Triny show you why every client leaves feeling "}
+            <span className="italic" style={{ color: "rgba(212, 175, 55, 0.8)" }}>consentida</span>.
+          </p>
 
             {/* CTA Buttons */}
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <a
-                href="tel:787-964-1826"
+              <button
+                onClick={openCTA}
                 className="btn-glow flex items-center gap-2.5 rounded-full px-10 py-4 text-lg font-semibold tracking-wide"
               >
                 <Phone className="h-5 w-5" />
                 <span>Call Now: 787-964-1826</span>
-              </a>
+              </button>
             </div>
 
             {/* Alternative Contact */}
             <div className="mt-6 flex items-center justify-center gap-6">
-              <a
-                href="sms:787-964-1826"
-                className="flex items-center gap-2 text-sm text-cream/50 transition-colors hover:text-champagne"
+              <button
+                onClick={openCTA}
+                className="flex items-center gap-2 text-sm transition-colors"
+                style={{ color: "rgba(245, 245, 240, 0.5)", background: "none", border: "none", cursor: "pointer" }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "rgb(212, 175, 55)")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(245, 245, 240, 0.5)")}
               >
                 <MessageCircle className="h-4 w-4" />
-                <span>Text Us</span>
-              </a>
-              <span className="text-cream/20">|</span>
-              <a
-                href="https://www.instagram.com/triny_dominicansalon/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-cream/50 transition-colors hover:text-champagne"
+                <span>Text Or DM Us</span>
+              </button>
+              <span style={{ color: "rgba(245, 245, 240, 0.2)" }}>|</span>
+              <button
+                onClick={openCTA}
+                className="flex items-center gap-2 text-sm transition-colors"
+                style={{ color: "rgba(245, 245, 240, 0.5)", background: "none", border: "none", cursor: "pointer" }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "rgb(212, 175, 55)")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(245, 245, 240, 0.5)")}
               >
                 <Instagram className="h-4 w-4" />
-                <span>DM on Instagram</span>
-              </a>
+                <span>DM or Call</span>
+              </button>
             </div>
           </ScrollAnimate>
         </div>
@@ -73,28 +79,31 @@ export default function Footer() {
               loading="lazy"
             />
             <div>
-              <p className="font-serif text-sm font-semibold text-cream">
+              <p className="font-serif text-sm font-semibold" style={{ color: "rgb(245, 245, 240)" }}>
                 {"Consentida's Dominican Hair Salon"}
               </p>
-              <p className="text-xs text-cream/40">by Triny</p>
+              <p className="text-xs" style={{ color: "rgba(245, 245, 240, 0.4)" }}>by Triny</p>
             </div>
           </div>
 
           {/* Address & Contact */}
           <div className="flex flex-col items-center gap-2 md:items-end">
-            <div className="flex items-center gap-1.5 text-xs text-cream/40">
+            <div className="flex items-center gap-1.5 text-xs" style={{ color: "rgba(245, 245, 240, 0.7)" }}>
               <MapPin className="h-3 w-3" />
-              <span>Stone Mountain, GA</span>
+              <span>5226 Stone Mountain Hwy Suite D, Stone Mountain, GA 30087</span>
             </div>
-            <p className="font-mono text-xs tracking-wide text-cream/30">
+            <a href="tel:787-964-1826" className="font-mono text-xs tracking-wide font-semibold transition-colors" style={{ color: "rgba(245, 245, 240, 0.5)" }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "rgb(212, 175, 55)")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(245, 245, 240, 0.5)")}
+            >
               Licensed Professional &middot; 787-964-1826
-            </p>
+            </a>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="mt-8 border-t border-zinc-800 pt-6 text-center">
-          <p className="text-xs text-cream/25">
+        <div className="mt-8 border-t pt-6 text-center" style={{ borderColor: "#27272A" }}>
+          <p className="text-xs" style={{ color: "rgba(245, 245, 240, 0.25)" }}>
             {`\u00A9 ${new Date().getFullYear()} Consentida's Dominican Hair Salon by Triny. All rights reserved.`}
           </p>
         </div>

@@ -11,16 +11,16 @@ export default function GuaranteeBanner() {
 
       <div className="relative mx-auto max-w-4xl px-4 text-center lg:px-8">
         <ScrollAnimate>
-          <ShieldCheck className="mx-auto h-10 w-10 text-champagne" />
-          <h2 className="mt-5 font-serif text-2xl font-bold leading-snug text-cream sm:text-3xl lg:text-4xl">
-            <span className="italic text-champagne">Consentidas:</span>{" "}
+          <ShieldCheck className="mx-auto h-10 w-10" style={{ color: "rgb(212, 175, 55)" }} />
+          <h2 className="mt-5 font-serif text-2xl font-bold leading-snug sm:text-3xl lg:text-4xl" style={{ color: "rgb(245, 245, 240)" }}>
+            <span className="italic" style={{ color: "rgb(212, 175, 55)" }}>Consentidas:</span>{" "}
             Mastery or Correction.
           </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-cream/65">
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed" style={{ color: "rgba(245, 245, 240, 0.65)" }}>
             If your results do not align with our established vision, I provide a complimentary refinement within 14 days. Your hair is my reputation.
           </p>
-          <div className="mt-6 inline-block rounded-full border border-champagne/20 px-5 py-2">
-            <span className="font-mono text-xs tracking-widest text-champagne/80 uppercase">
+          <div className="mt-6 inline-block rounded-full border px-5 py-2" style={{ borderColor: "rgba(212, 175, 55, 0.2)" }}>
+            <span className="font-mono text-xs tracking-widest uppercase" style={{ color: "rgba(212, 175, 55, 0.8)" }}>
               The Triny Promise
             </span>
           </div>

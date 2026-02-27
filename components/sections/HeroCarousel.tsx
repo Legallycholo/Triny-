@@ -67,7 +67,7 @@ export default function HeroCarousel() {
       </Swiper>
 
       {/* Fraction pagination */}
-      <div className="hero-pagination absolute bottom-4 left-0 right-0 z-10 text-center font-mono text-xs tracking-widest text-cream/70" />
+      <div className="hero-pagination absolute bottom-4 left-0 right-0 z-10 text-center font-mono text-xs tracking-widest" style={{ color: "rgba(245, 245, 240, 0.7)" }} />
     </div>
   )
 }

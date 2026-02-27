@@ -35,13 +35,13 @@ export default function GallerySection() {
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         {/* Section Header */}
         <ScrollAnimate className="text-center">
-          <span className="font-mono text-xs tracking-[0.2em] text-champagne uppercase">
+          <span className="font-mono text-xs tracking-[0.2em] uppercase" style={{ color: "rgb(212, 175, 55)" }}>
             Real Results
           </span>
-          <h2 className="mt-3 font-serif text-3xl font-bold text-cream text-balance sm:text-4xl lg:text-5xl">
+          <h2 className="mt-3 font-serif text-3xl font-bold text-balance sm:text-4xl lg:text-5xl" style={{ color: "rgb(245, 245, 240)" }}>
             The Mastery Gallery
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-cream/60">
+          <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed" style={{ color: "rgba(245, 245, 240, 0.6)" }}>
             Every transformation tells a story of trust, technique, and artistry. Swipe to witness the difference.
           </p>
         </ScrollAnimate>
@@ -69,10 +69,10 @@ export default function GallerySection() {
                 <div className="flex flex-col gap-6">
                   {/* Label */}
                   <div className="text-center">
-                    <h3 className="font-serif text-2xl font-semibold text-champagne">
+                    <h3 className="font-serif text-2xl font-semibold" style={{ color: "rgb(212, 175, 55)" }}>
                       {item.label}
                     </h3>
-                    <p className="mt-1 text-sm text-cream/50">{item.description}</p>
+                    <p className="mt-1 text-sm" style={{ color: "rgba(245, 245, 240, 0.5)" }}>{item.description}</p>
                   </div>
 
                   {/* Before / After Images */}
@@ -90,7 +90,7 @@ export default function GallerySection() {
                         />
                         {/* Before label */}
                         <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-zinc-950/80 to-transparent px-3 py-3">
-                          <span className="font-mono text-xs tracking-widest text-cream/70 uppercase">
+                          <span className="font-mono text-xs tracking-widest uppercase" style={{ color: "rgba(245, 245, 240, 0.7)" }}>
                             Before
                           </span>
                         </div>
@@ -98,7 +98,7 @@ export default function GallerySection() {
                     </div>
 
                     {/* After */}
-                    <div className="relative overflow-hidden rounded-xl ring-1 ring-champagne/30">
+                    <div className="relative overflow-hidden rounded-xl ring-1" style={{ ringColor: "rgba(212, 175, 55, 0.3)" }}>
                       <div className="aspect-square relative">
                         <Image
                           src={item.after}
@@ -110,7 +110,7 @@ export default function GallerySection() {
                         />
                         {/* After label */}
                         <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-zinc-950/80 to-transparent px-3 py-3">
-                          <span className="font-mono text-xs tracking-widest text-champagne uppercase">
+                          <span className="font-mono text-xs tracking-widest uppercase" style={{ color: "rgb(212, 175, 55)" }}>
                             After
                           </span>
                         </div>
@@ -125,14 +125,32 @@ export default function GallerySection() {
           {/* Navigation + Pagination */}
           <div className="mt-8 flex items-center justify-center gap-6">
             <button
-              className="gallery-prev flex h-10 w-10 items-center justify-center rounded-full border border-cream/20 text-cream/60 transition-colors hover:border-champagne hover:text-champagne"
+              className="gallery-prev flex h-10 w-10 items-center justify-center rounded-full border transition-colors"
+              style={{ borderColor: "rgba(245, 245, 240, 0.2)", color: "rgba(245, 245, 240, 0.6)" }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = "rgb(212, 175, 55)";
+                e.currentTarget.style.color = "rgb(212, 175, 55)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = "rgba(245, 245, 240, 0.2)";
+                e.currentTarget.style.color = "rgba(245, 245, 240, 0.6)";
+              }}
               aria-label="Previous transformation"
             >
               <ArrowLeft className="h-4 w-4" />
             </button>
-            <div className="gallery-pagination font-mono text-sm tracking-widest text-cream/50" />
+            <div className="gallery-pagination font-mono text-sm tracking-widest" style={{ color: "rgba(245, 245, 240, 0.5)" }} />
             <button
-              className="gallery-next flex h-10 w-10 items-center justify-center rounded-full border border-cream/20 text-cream/60 transition-colors hover:border-champagne hover:text-champagne"
+              className="gallery-next flex h-10 w-10 items-center justify-center rounded-full border transition-colors"
+              style={{ borderColor: "rgba(245, 245, 240, 0.2)", color: "rgba(245, 245, 240, 0.6)" }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = "rgb(212, 175, 55)";
+                e.currentTarget.style.color = "rgb(212, 175, 55)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = "rgba(245, 245, 240, 0.2)";
+                e.currentTarget.style.color = "rgba(245, 245, 240, 0.6)";
+              }}
               aria-label="Next transformation"
             >
               <ArrowRight className="h-4 w-4" />

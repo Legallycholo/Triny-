@@ -89,13 +89,13 @@ export default function TestimonialsSection() {
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         {/* Section Header */}
         <ScrollAnimate className="text-center">
-          <span className="font-mono text-xs tracking-[0.2em] text-champagne uppercase">
+          <span className="font-mono text-xs tracking-[0.2em] uppercase" style={{ color: "rgb(212, 175, 55)" }}>
             Verified Google Reviews
           </span>
           <h2 className="mt-3 font-serif text-3xl font-bold text-zinc-950 text-balance sm:text-4xl lg:text-5xl">
             Client Experiences
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-zinc-600">
+          <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed" style={{ color: "rgb(82, 82, 91)" }}>
             {"Real words from real clients. Every review is verified on Google."}
           </p>
         </ScrollAnimate>
@@ -125,7 +125,11 @@ export default function TestimonialsSection() {
           >
             {REVIEWS.map((review) => (
               <SwiperSlide key={review.name}>
-                <div className="flex h-full flex-col justify-between rounded-xl border border-light-gray bg-card p-6 transition-all duration-300 hover:border-champagne/40 hover:shadow-md">
+                <div className="flex h-full flex-col justify-between rounded-xl border bg-card p-6 transition-all duration-300 hover:shadow-md"
+                  style={{ borderColor: "rgb(229, 229, 229)" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.borderColor = "rgba(212, 175, 55, 0.4)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgb(229, 229, 229)")}
+                >
                   {/* Stars + Quote */}
                   <div>
                     <StarRating rating={review.rating} />
@@ -152,7 +156,7 @@ export default function TestimonialsSection() {
           </Swiper>
 
           {/* Pagination */}
-          <div className="reviews-pagination mt-8 text-center font-mono text-sm tracking-widest text-zinc-400" />
+          <div className="reviews-pagination mt-8 text-center font-mono text-sm tracking-widest" style={{ color: "rgb(161, 161, 170)" }} />
         </ScrollAnimate>
 
         {/* See More Reviews Link */}
@@ -161,7 +165,10 @@ export default function TestimonialsSection() {
             href={GOOGLE_REVIEWS_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-medium text-zinc-500 transition-colors hover:text-champagne"
+            className="inline-flex items-center gap-2 text-sm font-medium transition-colors"
+            style={{ color: "rgb(113, 113, 122)" }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "rgb(212, 175, 55)")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "rgb(113, 113, 122)")}
           >
             <span>See All Reviews on Google</span>
             <ExternalLink className="h-3.5 w-3.5" />
