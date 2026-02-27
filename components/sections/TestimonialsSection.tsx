@@ -85,17 +85,17 @@ const GOOGLE_REVIEWS_URL =
 
 export default function TestimonialsSection() {
   return (
-    <section id="reviews" className="bg-off-white py-20 lg:py-28">
+    <section id="reviews" className="py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         {/* Section Header */}
         <ScrollAnimate className="text-center">
           <span className="font-mono text-xs tracking-[0.2em] uppercase" style={{ color: "rgb(212, 175, 55)" }}>
             Verified Google Reviews
           </span>
-          <h2 className="mt-3 font-serif text-3xl font-bold text-zinc-950 text-balance sm:text-4xl lg:text-5xl">
+          <h2 className="mt-3 font-serif text-3xl font-bold text-balance sm:text-4xl lg:text-5xl" style={{ color: "rgb(245, 245, 240)" }}>
             Client Experiences
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed" style={{ color: "rgb(82, 82, 91)" }}>
+          <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed" style={{ color: "rgba(245, 245, 240, 0.6)" }}>
             {"Real words from real clients. Every review is verified on Google."}
           </p>
         </ScrollAnimate>
@@ -125,29 +125,29 @@ export default function TestimonialsSection() {
           >
             {REVIEWS.map((review) => (
               <SwiperSlide key={review.name}>
-                <div className="flex h-full flex-col justify-between rounded-xl border bg-card p-6 transition-all duration-300 hover:shadow-md"
-                  style={{ borderColor: "rgb(229, 229, 229)" }}
+                <div className="flex h-full flex-col justify-between rounded-xl border bg-zinc-950/40 backdrop-blur-md p-6 transition-all duration-300 hover:shadow-md"
+                  style={{ borderColor: "rgba(245, 245, 240, 0.15)" }}
                   onMouseEnter={(e) => (e.currentTarget.style.borderColor = "rgba(212, 175, 55, 0.4)")}
-                  onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgb(229, 229, 229)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgba(245, 245, 240, 0.15)")}
                 >
                   {/* Stars + Quote */}
                   <div>
                     <StarRating rating={review.rating} />
-                    <p className="mt-4 text-sm leading-relaxed text-zinc-600 line-clamp-6">
+                    <p className="mt-4 text-sm leading-relaxed line-clamp-6" style={{ color: "rgba(245, 245, 240, 0.8)" }}>
                       {`"${review.text}"`}
                     </p>
                   </div>
 
                   {/* Author */}
-                  <div className="mt-5 flex items-center gap-3 border-t border-light-gray pt-4">
-                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-zinc-950 font-serif text-sm font-semibold text-champagne">
+                  <div className="mt-5 flex items-center gap-3 border-t pt-4" style={{ borderColor: "rgba(245, 245, 240, 0.1)" }}>
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-zinc-800 font-serif text-sm font-semibold text-champagne">
                       {review.name.charAt(0)}
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-zinc-900">
+                      <p className="text-sm font-medium" style={{ color: "rgb(245, 245, 240)" }}>
                         {review.name}
                       </p>
-                      <p className="text-xs text-zinc-400">Verified Client</p>
+                      <p className="text-xs" style={{ color: "rgba(245, 245, 240, 0.5)" }}>Verified Client</p>
                     </div>
                   </div>
                 </div>

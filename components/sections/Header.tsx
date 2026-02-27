@@ -17,7 +17,7 @@ export default function Header() {
   const { openCTA } = useCTA()
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-zinc-950/95 backdrop-blur-md border-b" style={{ borderColor: "rgba(212, 175, 55, 0.2)" }}>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/20 backdrop-blur-md border-b" style={{ borderColor: "rgba(212, 175, 55, 0.2)" }}>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-8">
         {/* Logo */}
         <a href="#" className="flex shrink-0 items-center gap-3">
@@ -72,7 +72,7 @@ export default function Header() {
           </a>
           <button
             onClick={openCTA}
-            className="btn-glow flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold"
+            className="btn-glow celestial-glow flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold"
           >
             <Phone className="h-4 w-4" />
             <span>787-964-1826</span>
@@ -92,7 +92,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="border-t bg-zinc-950/98 lg:hidden" style={{ borderColor: "rgba(212, 175, 55, 0.1)" }}>
+        <div className="border-t bg-background/40 backdrop-blur-md lg:hidden" style={{ borderColor: "rgba(212, 175, 55, 0.1)" }}>
           <nav className="flex flex-col px-4 py-4" aria-label="Mobile navigation">
             {NAV_LINKS.map((link) => (
               <a
@@ -113,7 +113,7 @@ export default function Header() {
                   setMobileMenuOpen(false)
                   openCTA()
                 }}
-                className="btn-glow flex flex-1 items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold"
+                className="btn-glow celestial-glow flex flex-1 items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold"
               >
                 <Phone className="h-4 w-4" />
                 <span>Call Now</span>

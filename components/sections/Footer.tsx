@@ -8,7 +8,7 @@ import ScrollAnimate from "@/components/ui/scroll-animate"
 export default function Footer() {
   const { openCTA } = useCTA()
   return (
-    <footer className="bg-zinc-950">
+    <footer className="relative">
       {/* Final CTA Section */}
       <section className="relative overflow-hidden border-b border-zinc-800 py-20 lg:py-28">
         {/* Background accent */}
@@ -16,15 +16,15 @@ export default function Footer() {
 
         <div className="relative mx-auto max-w-4xl px-4 text-center lg:px-8">
           <ScrollAnimate>
-          <h2 className="font-serif text-4xl font-bold leading-tight text-balance sm:text-5xl lg:text-6xl" style={{ color: "rgb(245, 245, 240)" }}>
-            Transform Your{" "}
-            <span style={{ color: "rgb(212, 175, 55)" }}>Image</span>{" "}
-            Today.
-          </h2>
-          <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed" style={{ color: "rgba(245, 245, 240, 0.6)" }}>
-            {"Your journey to healthier, more beautiful hair starts with a single call. Let Triny show you why every client leaves feeling "}
-            <span className="italic" style={{ color: "rgba(212, 175, 55, 0.8)" }}>consentida</span>.
-          </p>
+            <h2 className="font-serif text-4xl font-bold leading-tight text-balance sm:text-5xl lg:text-6xl" style={{ color: "rgb(245, 245, 240)" }}>
+              Transform Your{" "}
+              <span style={{ color: "rgb(212, 175, 55)" }}>Image</span>{" "}
+              Today.
+            </h2>
+            <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed" style={{ color: "rgba(245, 245, 240, 0.6)" }}>
+              {"Your journey to healthier, more beautiful hair starts with a single call. Let Triny show you why every client leaves feeling "}
+              <span className="italic" style={{ color: "rgba(212, 175, 55, 0.8)" }}>consentida</span>.
+            </p>
 
             {/* CTA Buttons */}
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">

@@ -48,14 +48,14 @@ const FAQ_ITEMS = [
 
 export default function FAQSection() {
   return (
-    <section id="faq" className="bg-off-white py-20 lg:py-28">
+    <section id="faq" className="py-20 lg:py-28">
       <div className="mx-auto max-w-3xl px-4 lg:px-8">
         {/* Section Header */}
         <ScrollAnimate className="text-center">
           <span className="font-mono text-xs tracking-[0.2em] uppercase" style={{ color: "rgb(212, 175, 55)" }}>
             Common Questions
           </span>
-          <h2 className="mt-3 font-serif text-3xl font-bold text-zinc-950 text-balance sm:text-4xl lg:text-5xl">
+          <h2 className="mt-3 font-serif text-3xl font-bold text-balance sm:text-4xl lg:text-5xl" style={{ color: "rgb(245, 245, 240)" }}>
             Frequently Asked
           </h2>
         </ScrollAnimate>
@@ -68,15 +68,15 @@ export default function FAQSection() {
                 key={`faq-${index}`}
                 value={`faq-${index}`}
                 className="border-b"
-                style={{ borderColor: "rgb(229, 229, 229)" }}
+                style={{ borderColor: "rgba(245, 245, 240, 0.2)" }}
               >
-                <AccordionTrigger className="text-left font-serif text-base font-medium text-zinc-900 hover:no-underline" style={{ color: "rgb(24, 24, 27)" }}
+                <AccordionTrigger className="text-left font-serif text-base font-medium hover:no-underline" style={{ color: "rgb(245, 245, 240)" }}
                   onMouseEnter={(e) => (e.currentTarget.style.color = "rgb(212, 175, 55)")}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = "rgb(24, 24, 27)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "rgb(245, 245, 240)")}
                 >
                   {item.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-sm leading-relaxed text-zinc-600">
+                <AccordionContent className="text-sm leading-relaxed" style={{ color: "rgba(245, 245, 240, 0.7)" }}>
                   {item.answer}
                 </AccordionContent>
               </AccordionItem>
