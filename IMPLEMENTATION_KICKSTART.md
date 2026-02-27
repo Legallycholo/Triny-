@@ -118,7 +118,7 @@ A premium, luxury-focused landing page showcasing Triny's professional hair and 
 - **Content:**
   - Business name & tagline
   - Phone: 787-964-1826
-  - Address: Stone Mountain, GA
+  - Address: 5226 Stone Mountain Hwy, Stone Mountain, GA, United States, 30087
   - Social links:
     - Instagram: https://www.instagram.com/triny_dominicansalon/
     - Google Reviews link
