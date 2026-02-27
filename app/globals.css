@@ -168,16 +168,6 @@
 
 /* Custom Animations for Consentidas */
 @layer utilities {
-  /* Ultraviolet CTA Glow - Active on Hover */
-  .btn-glow {
-    @apply bg-zinc-950 border-2 border-champagne text-cream transition-all duration-300 ease-out;
-  }
-
-  .btn-glow:hover {
-    @apply text-champagne;
-    box-shadow: 0 0 20px rgba(124, 58, 237, 0.7), inset 0 0 20px rgba(212, 175, 55, 0.2);
-  }
-
   /* Mobile FAB Pulse Animation */
   @keyframes pulse-glow {
     0%, 100% {
@@ -211,15 +201,6 @@
     opacity: 0;
   }
 
-  /* Card Lift Effect */
-  .card-lift {
-    @apply transition-all duration-200 ease-out;
-  }
-
-  .card-lift:hover {
-    @apply -translate-y-1 shadow-lg;
-  }
-
   /* Staggered Animation */
   .stagger-1 { animation-delay: 0.1s; }
   .stagger-2 { animation-delay: 0.2s; }
@@ -236,27 +217,62 @@
     scroll-behavior: smooth;
   }
 
-  /* Service Card Hover */
+  /* Ultraviolet Glow Button */
+  .btn-glow {
+    background-color: rgb(9, 9, 11);
+    border: 2px solid rgb(212, 175, 55);
+    color: rgb(245, 245, 240);
+    transition: all 200ms ease-out;
+  }
+
+  .btn-glow:hover {
+    color: rgb(212, 175, 55);
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.7), inset 0 0 20px rgba(212, 175, 55, 0.2);
+  }
+
+  /* Card Lift Effect */
+  .card-lift {
+    transition: all 200ms ease-out;
+  }
+
+  .card-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Service Card */
   .service-card {
-    @apply rounded-lg border border-light-gray bg-cream p-6 transition-all duration-300;
+    border-radius: calc(var(--radius) - 2px);
+    border: 1px solid rgb(229, 229, 229);
+    background-color: rgb(245, 245, 240);
+    padding: 24px;
+    transition: all 300ms;
   }
 
   .service-card:hover {
-    @apply border-champagne shadow-lg -translate-y-1;
+    border-color: rgb(212, 175, 55);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
   }
 
-  /* Gold Accent Text */
+  /* Text Utilities */
   .text-accent-gold {
-    @apply text-champagne;
+    color: rgb(212, 175, 55);
   }
 
-  /* Primary Brand Color */
   .text-primary-dark {
-    @apply text-zinc-950 dark:text-cream;
+    color: rgb(9, 9, 11);
   }
 
-  /* Muted Foreground */
+  .dark .text-primary-dark {
+    color: rgb(245, 245, 240);
+  }
+
   .text-muted-fg {
-    @apply text-gray-600 dark:text-gray-400;
+    color: rgb(75, 85, 99);
+  }
+
+  .dark .text-muted-fg {
+    color: rgb(161, 161, 170);
   }
 }

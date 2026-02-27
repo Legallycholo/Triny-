@@ -52,7 +52,7 @@ export default function FAQSection() {
       <div className="mx-auto max-w-3xl px-4 lg:px-8">
         {/* Section Header */}
         <ScrollAnimate className="text-center">
-          <span className="font-mono text-xs tracking-[0.2em] text-champagne uppercase">
+          <span className="font-mono text-xs tracking-[0.2em] uppercase" style={{ color: "rgb(212, 175, 55)" }}>
             Common Questions
           </span>
           <h2 className="mt-3 font-serif text-3xl font-bold text-zinc-950 text-balance sm:text-4xl lg:text-5xl">
@@ -67,9 +67,13 @@ export default function FAQSection() {
               <AccordionItem
                 key={`faq-${index}`}
                 value={`faq-${index}`}
-                className="border-light-gray"
+                className="border-b"
+                style={{ borderColor: "rgb(229, 229, 229)" }}
               >
-                <AccordionTrigger className="text-left font-serif text-base font-medium text-zinc-900 hover:text-champagne hover:no-underline">
+                <AccordionTrigger className="text-left font-serif text-base font-medium text-zinc-900 hover:no-underline" style={{ color: "rgb(24, 24, 27)" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = "rgb(212, 175, 55)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "rgb(24, 24, 27)")}
+                >
                   {item.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-sm leading-relaxed text-zinc-600">

@@ -86,7 +86,7 @@ export default function ServicesSection() {
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         {/* Section Header */}
         <ScrollAnimate className="text-center">
-          <span className="font-mono text-xs tracking-[0.2em] text-champagne uppercase">
+          <span className="font-mono text-xs tracking-[0.2em] uppercase" style={{ color: "rgb(212, 175, 55)" }}>
             Full-Service Salon
           </span>
           <h2 className="mt-3 font-serif text-3xl font-bold text-zinc-950 text-balance sm:text-4xl lg:text-5xl">
@@ -94,7 +94,7 @@ export default function ServicesSection() {
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-zinc-700">
             {"From precision cuts to clinical scalp restoration, every service is delivered with 21+ years of mastery. Because you deserve to be "}
-            <span className="italic text-champagne-muted">consentida</span>.
+            <span className="italic" style={{ color: "rgb(201, 169, 97)" }}>consentida</span>.
           </p>
         </ScrollAnimate>
 
@@ -102,7 +102,10 @@ export default function ServicesSection() {
         <ScrollAnimate className="mt-6 flex items-center justify-center gap-2" delay={0.1}>
           <button
             onClick={() => setPricingTooltip(!pricingTooltip)}
-            className="flex items-center gap-1.5 text-sm text-zinc-500 transition-colors hover:text-champagne"
+            className="flex items-center gap-1.5 text-sm transition-colors"
+            style={{ color: "rgb(113, 113, 122)" }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "rgb(212, 175, 55)")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "rgb(113, 113, 122)")}
             aria-expanded={pricingTooltip}
           >
             <HelpCircle className="h-4 w-4" />
@@ -110,7 +113,7 @@ export default function ServicesSection() {
           </button>
         </ScrollAnimate>
         {pricingTooltip && (
-          <div className="mx-auto mt-3 max-w-md rounded-lg border border-champagne/20 bg-zinc-950 px-5 py-4 text-center text-sm leading-relaxed text-cream/80">
+          <div className="mx-auto mt-3 max-w-md rounded-lg border bg-zinc-950 px-5 py-4 text-center text-sm leading-relaxed" style={{ borderColor: "rgba(212, 175, 55, 0.2)", color: "rgba(245, 245, 240, 0.8)" }}>
             We must know the length of your hair and current health for fair pricing for all of our customers. Every head of hair is unique.
             <a
               href="tel:787-964-1826"
@@ -128,7 +131,11 @@ export default function ServicesSection() {
             const Icon = category.icon
             return (
               <ScrollAnimate key={category.title} delay={index * 0.1}>
-                <div className="group h-full rounded-xl border border-light-gray bg-card p-6 transition-all duration-300 hover:border-champagne/50 hover:-translate-y-1 hover:shadow-lg">
+                <div className="group h-full rounded-xl border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                  style={{ borderColor: "rgb(229, 229, 229)" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.borderColor = "rgba(212, 175, 55, 0.5)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgb(229, 229, 229)")}
+                >
                   {/* Card Header */}
                   <div className="flex items-center gap-3 mb-4">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-zinc-950 text-champagne">
@@ -159,7 +166,7 @@ export default function ServicesSection() {
 
         {/* Bottom CTA */}
         <ScrollAnimate className="mt-14 text-center" delay={0.2}>
-          <p className="mb-4 text-sm text-zinc-500">
+          <p className="mb-4 text-sm" style={{ color: "rgb(113, 113, 122)" }}>
             Final investment determined during your 1-on-1 artistry consultation.
           </p>
           <a

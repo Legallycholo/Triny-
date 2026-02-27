@@ -16,22 +16,22 @@ export default function HeroSection() {
         {/* Text Content - Mobile: first, Desktop: left */}
         <div className="flex w-full flex-col items-center text-center lg:w-1/2 lg:items-start lg:text-left">
           {/* Tagline */}
-          <span className="mb-4 inline-block rounded-full border border-champagne/30 px-4 py-1.5 font-mono text-xs tracking-[0.2em] text-champagne uppercase">
+          <span className="mb-4 inline-block rounded-full border px-4 py-1.5 font-mono text-xs tracking-[0.2em] uppercase" style={{ borderColor: "rgba(212, 175, 55, 0.3)", color: "rgb(212, 175, 55)" }}>
             21+ Years of Excellence
           </span>
 
           {/* Main Headline */}
-          <h1 className="font-serif text-4xl font-bold leading-tight tracking-tight text-cream text-balance sm:text-5xl lg:text-6xl xl:text-7xl">
+          <h1 className="font-serif text-4xl font-bold leading-tight tracking-tight text-balance sm:text-5xl lg:text-6xl xl:text-7xl" style={{ color: "rgb(245, 245, 240)" }}>
             The World of{" "}
-            <span className="text-champagne">Color</span>{" "}
+            <span style={{ color: "rgb(212, 175, 55)" }}>Color</span>{" "}
             <br className="hidden lg:block" />
             in Stone Mountain.
           </h1>
 
           {/* Sub-headline */}
-          <p className="mt-5 max-w-lg text-base leading-relaxed text-cream/70 text-pretty sm:text-lg">
+          <p className="mt-5 max-w-lg text-base leading-relaxed text-pretty sm:text-lg" style={{ color: "rgba(245, 245, 240, 0.7)" }}>
             {"Triny: Professional Artistry, Full-Service Haircare, and Clinical Scalp Restoration. Where every client is "}
-            <span className="italic text-champagne/90">consentida</span>
+            <span className="italic" style={{ color: "rgba(212, 175, 55, 0.9)" }}>consentida</span>
             {" \u2014 spoiled with care."}
           </p>
 
@@ -49,7 +49,16 @@ export default function HeroSection() {
             {/* Secondary CTA - Text / DM */}
             <a
               href="sms:787-964-1826"
-              className="flex items-center gap-2 rounded-full border border-cream/20 px-6 py-4 text-sm font-medium text-cream/80 transition-all duration-300 hover:border-champagne/50 hover:text-champagne"
+              className="flex items-center gap-2 rounded-full border px-6 py-4 text-sm font-medium transition-all duration-300"
+              style={{ borderColor: "rgba(245, 245, 240, 0.2)", color: "rgba(245, 245, 240, 0.8)" }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = "rgba(212, 175, 55, 0.5)";
+                e.currentTarget.style.color = "rgb(212, 175, 55)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = "rgba(245, 245, 240, 0.2)";
+                e.currentTarget.style.color = "rgba(245, 245, 240, 0.8)";
+              }}
             >
               <MessageCircle className="h-4 w-4" />
               <span>Text Us</span>
@@ -57,7 +66,7 @@ export default function HeroSection() {
           </div>
 
           {/* Trust indicator */}
-          <p className="mt-6 font-mono text-xs tracking-wide text-cream/40">
+          <p className="mt-6 font-mono text-xs tracking-wide" style={{ color: "rgba(245, 245, 240, 0.4)" }}>
             Licensed Professional &middot; Stone Mountain, GA
           </p>
         </div>
@@ -70,8 +79,8 @@ export default function HeroSection() {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center gap-2">
-        <span className="text-xs tracking-widest text-cream/30 uppercase">Scroll</span>
-        <div className="h-8 w-px bg-gradient-to-b from-champagne/40 to-transparent" />
+        <span className="text-xs tracking-widest uppercase" style={{ color: "rgba(245, 245, 240, 0.3)" }}>Scroll</span>
+        <div className="h-8 w-px" style={{ backgroundImage: "linear-gradient(to bottom, rgba(212, 175, 55, 0.4), transparent)" }} />
       </div>
     </section>
   )
