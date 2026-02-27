@@ -21,8 +21,8 @@ A premium, luxury-focused landing page showcasing Triny's professional hair and 
 - **Desktop Layout:** Side-by-side (text left, image right)
 - **Mobile Layout:** Vertically stacked - Headline → CTA Button → Stylist Image
 - **Text Alignment:** Left on desktop, center on mobile
-- **Primary Headline:** "Restore Your Hair, Restore Your Confidence"
-- **Subheadline:** Short emotional copy about transformation and professional care
+- **Primary Headline:** "Trusted Stone Mountain GA Hair Salon – 21 Years of Professional Hair Expertise"
+- **Subheadline:** Delivering precision cuts, vibrant color, and healthy hair transformations backed by over two decades of professional experience.
 - **CTA #1:** "Call Now" button with ultraviolet glow effect (hover only)
   - `tel:787-964-1826` link
   - Shimmering gold border with purple/blue glow on hover
