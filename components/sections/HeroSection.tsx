@@ -1,9 +1,11 @@
 "use client"
 
 import { Phone, MessageCircle } from "lucide-react"
+import { useCTA } from "@/components/providers/cta-provider"
 import HeroCarousel from "./HeroCarousel"
 
 export default function HeroSection() {
+  const { openCTA } = useCTA()
   return (
     <section
       id="hero"
@@ -38,17 +40,17 @@ export default function HeroSection() {
           {/* CTA Buttons */}
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row lg:items-start">
             {/* Primary CTA */}
-            <a
-              href="tel:787-964-1826"
+            <button
+              onClick={openCTA}
               className="btn-glow flex items-center gap-2.5 rounded-full px-8 py-4 text-base font-semibold tracking-wide"
             >
               <Phone className="h-5 w-5" />
               <span>Call Now: Secure Your Consultation</span>
-            </a>
+            </button>
 
-            {/* Secondary CTA - Text / DM */}
-            <a
-              href="sms:787-964-1826"
+            {/* Secondary CTA - Open Dialog */}
+            <button
+              onClick={openCTA}
               className="flex items-center gap-2 rounded-full border px-6 py-4 text-sm font-medium transition-all duration-300"
               style={{ borderColor: "rgba(245, 245, 240, 0.2)", color: "rgba(245, 245, 240, 0.8)" }}
               onMouseEnter={(e) => {
@@ -61,8 +63,8 @@ export default function HeroSection() {
               }}
             >
               <MessageCircle className="h-4 w-4" />
-              <span>Text Us</span>
-            </a>
+              <span>Text Or DM Us</span>
+            </button>
           </div>
 
           {/* Trust indicator */}

@@ -3,6 +3,7 @@
 import { useState } from "react"
 import Image from "next/image"
 import { Phone, Menu, X, Instagram } from "lucide-react"
+import { useCTA } from "@/components/providers/cta-provider"
 
 const NAV_LINKS = [
   { label: "Services", href: "#services" },
@@ -13,6 +14,7 @@ const NAV_LINKS = [
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const { openCTA } = useCTA()
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-zinc-950/95 backdrop-blur-md border-b" style={{ borderColor: "rgba(212, 175, 55, 0.2)" }}>
@@ -68,13 +70,13 @@ export default function Header() {
             <Instagram className="h-4 w-4" />
             <span className="sr-only">Instagram</span>
           </a>
-          <a
-            href="tel:787-964-1826"
+          <button
+            onClick={openCTA}
             className="btn-glow flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold"
           >
             <Phone className="h-4 w-4" />
             <span>787-964-1826</span>
-          </a>
+          </button>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -106,13 +108,16 @@ export default function Header() {
               </a>
             ))}
             <div className="mt-4 flex items-center gap-3">
-              <a
-                href="tel:787-964-1826"
+              <button
+                onClick={() => {
+                  setMobileMenuOpen(false)
+                  openCTA()
+                }}
                 className="btn-glow flex flex-1 items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold"
               >
                 <Phone className="h-4 w-4" />
                 <span>Call Now</span>
-              </a>
+              </button>
               <a
                 href="https://www.instagram.com/triny_dominicansalon/"
                 target="_blank"

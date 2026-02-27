@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from "react"
 import { Phone } from "lucide-react"
+import { useCTA } from "@/components/providers/cta-provider"
 
 export default function MobileFAB() {
   const [visible, setVisible] = useState(false)
+  const { openCTA } = useCTA()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,14 +22,14 @@ export default function MobileFAB() {
 
   return (
     <div className="fixed bottom-6 right-6 z-50 lg:hidden">
-      <a
-        href="tel:787-964-1826"
+      <button
+        onClick={openCTA}
         className="fab-pulse flex h-14 w-14 items-center justify-center rounded-full bg-zinc-950 border-2 shadow-2xl transition-transform active:scale-95"
         style={{ borderColor: "rgb(212, 175, 55)", color: "rgb(212, 175, 55)" }}
-        aria-label="Call Consentida's Dominican Hair Salon"
+        aria-label="Contact Consentida's Dominican Hair Salon"
       >
         <Phone className="h-6 w-6" />
-      </a>
+      </button>
     </div>
   )
 }

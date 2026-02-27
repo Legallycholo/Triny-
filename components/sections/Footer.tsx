@@ -2,9 +2,11 @@
 
 import Image from "next/image"
 import { Phone, MessageCircle, Instagram, MapPin } from "lucide-react"
+import { useCTA } from "@/components/providers/cta-provider"
 import ScrollAnimate from "@/components/ui/scroll-animate"
 
 export default function Footer() {
+  const { openCTA } = useCTA()
   return (
     <footer className="bg-zinc-950">
       {/* Final CTA Section */}
@@ -26,40 +28,38 @@ export default function Footer() {
 
             {/* CTA Buttons */}
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <a
-                href="tel:787-964-1826"
+              <button
+                onClick={openCTA}
                 className="btn-glow flex items-center gap-2.5 rounded-full px-10 py-4 text-lg font-semibold tracking-wide"
               >
                 <Phone className="h-5 w-5" />
                 <span>Call Now: 787-964-1826</span>
-              </a>
+              </button>
             </div>
 
             {/* Alternative Contact */}
             <div className="mt-6 flex items-center justify-center gap-6">
-              <a
-                href="sms:787-964-1826"
+              <button
+                onClick={openCTA}
                 className="flex items-center gap-2 text-sm transition-colors"
-                style={{ color: "rgba(245, 245, 240, 0.5)" }}
+                style={{ color: "rgba(245, 245, 240, 0.5)", background: "none", border: "none", cursor: "pointer" }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "rgb(212, 175, 55)")}
                 onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(245, 245, 240, 0.5)")}
               >
                 <MessageCircle className="h-4 w-4" />
-                <span>Text Us</span>
-              </a>
+                <span>Text Or DM Us</span>
+              </button>
               <span style={{ color: "rgba(245, 245, 240, 0.2)" }}>|</span>
-              <a
-                href="https://www.instagram.com/triny_dominicansalon/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={openCTA}
                 className="flex items-center gap-2 text-sm transition-colors"
-                style={{ color: "rgba(245, 245, 240, 0.5)" }}
+                style={{ color: "rgba(245, 245, 240, 0.5)", background: "none", border: "none", cursor: "pointer" }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "rgb(212, 175, 55)")}
                 onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(245, 245, 240, 0.5)")}
               >
                 <Instagram className="h-4 w-4" />
-                <span>DM on Instagram</span>
-              </a>
+                <span>DM or Call</span>
+              </button>
             </div>
           </ScrollAnimate>
         </div>
@@ -88,13 +88,16 @@ export default function Footer() {
 
           {/* Address & Contact */}
           <div className="flex flex-col items-center gap-2 md:items-end">
-            <div className="flex items-center gap-1.5 text-xs" style={{ color: "rgba(245, 245, 240, 0.4)" }}>
+            <div className="flex items-center gap-1.5 text-xs" style={{ color: "rgba(245, 245, 240, 0.7)" }}>
               <MapPin className="h-3 w-3" />
-              <span>Stone Mountain, GA</span>
+              <span>5226 Stone Mountain Hwy Suite D, Stone Mountain, GA 30087</span>
             </div>
-            <p className="font-mono text-xs tracking-wide" style={{ color: "rgba(245, 245, 240, 0.3)" }}>
+            <a href="tel:787-964-1826" className="font-mono text-xs tracking-wide font-semibold transition-colors" style={{ color: "rgba(245, 245, 240, 0.5)" }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "rgb(212, 175, 55)")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(245, 245, 240, 0.5)")}
+            >
               Licensed Professional &middot; 787-964-1826
-            </p>
+            </a>
           </div>
         </div>
 
