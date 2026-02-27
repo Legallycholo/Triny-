@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "Beauty Salon",
   ],
   openGraph: {
-    title: "Consentida's Dominican Hair Salon by Triny",
+    title: "BEST Dominican Beauty Salon in Stone Mountain GA. Blowouts, Silk Press & Hair Coloring Near Me",
     description: "The World of Color in Stone Mountain. 21+ years of editorial excellence.",
     type: "website",
     locale: "en_US",
