@@ -2,7 +2,7 @@
 
 **Project:** Premium Landing Page for Consentidas Dominican Hair Salon by Triny  
 **Owner:** Triny (Professional Cosmetologist)  
-**Location:** Stone Mountain, GA  
+**Location:** 5226 Stone Mountain Hwy Suite D, Stone Mountain, GA 30087 
 **Phone:** 787-964-1826  
 **Instagram:** https://www.instagram.com/triny_dominicansalon/  
 **Google Reviews:** https://www.google.com/search?q=Consentida%27s+Dominican+Salon+By+Triny%2C+Stone+Mountain+Highway%2C+Stone+Mountain%2C+GA
