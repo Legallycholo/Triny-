@@ -121,7 +121,7 @@ A premium, luxury-focused landing page showcasing Triny's professional hair and 
   - Address: 5226 Stone Mountain Hwy, Stone Mountain, GA, United States, 30087
   - Social links:
     - Instagram: https://www.instagram.com/triny_dominicansalon/
-    - Google Reviews link
+    - Google Reviews link: https://www.google.com/maps/place/Consentida's+Dominican+Salon+By+Triny/@33.8232159,-84.1134109,17z/data=!3m1!4b1!4m6!3m5!1s0x88f523da0fa6085b:0x8fe7ce18e0e67be8!8m2!3d33.8232159!4d-84.110836!16s%2Fg%2F11tngzd1jx?entry=ttu&g_ep=EgoyMDI2MDIyNC4wIKXMDSoASAFQAw%3D%3D
   - Quick links: Services, FAQ, Contact
 - **CTA #3:** "Call Now" or "Book Appointment" button
 - **Copyright notice
