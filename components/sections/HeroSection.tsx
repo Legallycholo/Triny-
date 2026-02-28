@@ -17,25 +17,25 @@ export default function HeroSection() {
         <div className="flex w-full flex-col items-center text-center lg:w-1/2 lg:items-start lg:text-left">
           {/* Tagline */}
           <span className="mb-4 inline-block rounded-full border px-4 py-1.5 font-mono text-xs tracking-[0.2em] uppercase" style={{ borderColor: "rgba(212, 175, 55, 0.3)", color: "rgb(212, 175, 55)" }}>
-            21+ Years of Excellence
+            The World Of Color
           </span>
 
           {/* Main Headline */}
           <h1 className="font-serif text-4xl font-bold leading-tight tracking-tight text-balance sm:text-5xl lg:text-6xl xl:text-7xl" style={{ color: "rgb(245, 245, 240)" }}>
-            The World of{" "}
-            <span style={{ color: "rgb(212, 175, 55)" }}>Color</span>{" "}
+            Beauty{" "}
+            <span style={{ color: "rgb(212, 175, 55)" }}>Salon</span>{" "}
             <br className="hidden lg:block" />
             in Stone Mountain.
           </h1>
 
           {/* Sub-headline */}
           <p className="mt-5 max-w-lg text-base leading-relaxed text-pretty sm:text-lg" style={{ color: "rgba(245, 245, 240, 0.75)" }}>
-            {"Triny: "}
-            <span className="kw-gold">Professional Artistry</span>
+            {"Hair salon. Hairdresser "}
+            <span className="kw-gold">Haircut</span>
             {", "}
-            <span className="kw-violet">Full-Service Haircare</span>
+            <span className="kw-violet">Blayage</span>
             {", and "}
-            <span className="kw-gold">Clinical Scalp Restoration</span>
+            <span className="kw-gold">Keratin treatment</span>
             {". Where every client is "}
             <span className="kw-violet">consentida</span>
             {" \u2014 spoiled with care."}
