@@ -16,7 +16,7 @@ export default function GuaranteeBanner() {
             <span className="italic" style={{ color: "rgb(212, 175, 55)" }}>Consentidas:</span>{" "}
             Mastery or Correction.
           </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed" style={{ color: "rgba(245, 245, 240, 0.65)" }}>
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed" style={{ color: "var(--text-secondary)" }}>
             If your results do not align with our established vision, I provide a complimentary refinement within 14 days. Your hair is my reputation.
           </p>
           <div className="mt-6 inline-block rounded-full border px-5 py-2" style={{ borderColor: "rgba(212, 175, 55, 0.2)" }}>

@@ -95,7 +95,7 @@ export default function TestimonialsSection() {
           <h2 className="mt-3 font-serif text-3xl font-bold text-balance sm:text-4xl lg:text-5xl" style={{ color: "rgb(245, 245, 240)" }}>
             Client Experiences
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed" style={{ color: "rgba(245, 245, 240, 0.6)" }}>
+          <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
             {"Real words from real clients. Every review is verified on Google."}
           </p>
         </ScrollAnimate>
@@ -133,7 +133,7 @@ export default function TestimonialsSection() {
                   {/* Stars + Quote */}
                   <div>
                     <StarRating rating={review.rating} />
-                    <p className="mt-4 text-sm leading-relaxed line-clamp-6" style={{ color: "rgba(245, 245, 240, 0.8)" }}>
+                    <p className="mt-4 text-sm leading-relaxed line-clamp-6" style={{ color: "var(--text-muted)" }}>
                       {`"${review.text}"`}
                     </p>
                   </div>
@@ -147,7 +147,7 @@ export default function TestimonialsSection() {
                       <p className="text-sm font-medium" style={{ color: "rgb(245, 245, 240)" }}>
                         {review.name}
                       </p>
-                      <p className="text-xs" style={{ color: "rgba(245, 245, 240, 0.5)" }}>Verified Client</p>
+                      <p className="text-xs" style={{ color: "var(--text-tertiary)" }}>Verified Client</p>
                     </div>
                   </div>
                 </div>
@@ -156,7 +156,7 @@ export default function TestimonialsSection() {
           </Swiper>
 
           {/* Pagination */}
-          <div className="reviews-pagination mt-8 text-center font-mono text-sm tracking-widest" style={{ color: "rgb(161, 161, 170)" }} />
+          <div className="reviews-pagination mt-8 text-center font-mono text-sm tracking-widest" style={{ color: "var(--text-muted)" }} />
         </ScrollAnimate>
 
         {/* See More Reviews Link */}
@@ -166,9 +166,9 @@ export default function TestimonialsSection() {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm font-medium transition-colors"
-            style={{ color: "rgb(113, 113, 122)" }}
+            style={{ color: "var(--text-muted)" }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "rgb(212, 175, 55)")}
-            onMouseLeave={(e) => (e.currentTarget.style.color = "rgb(113, 113, 122)")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
           >
             <span>See All Reviews on Google</span>
             <ExternalLink className="h-3.5 w-3.5" />

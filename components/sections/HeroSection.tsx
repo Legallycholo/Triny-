@@ -21,7 +21,7 @@ export default function HeroSection() {
           </span>
 
           {/* Main Headline */}
-          <h1 className="font-serif text-4xl font-bold leading-tight tracking-tight text-balance sm:text-5xl lg:text-6xl xl:text-7xl" style={{ color: "rgb(245, 245, 240)" }}>
+          <h1 className="font-display text-4xl font-bold leading-tight tracking-tight text-balance sm:text-5xl lg:text-6xl xl:text-7xl" style={{ color: "rgb(245, 245, 240)" }}>
             Beauty{" "}
             <span style={{ color: "rgb(212, 175, 55)" }}>Salon</span>{" "}
             <br className="hidden lg:block" />
@@ -29,7 +29,7 @@ export default function HeroSection() {
           </h1>
 
           {/* Sub-headline */}
-          <p className="mt-5 max-w-lg text-base leading-relaxed text-pretty sm:text-lg" style={{ color: "rgba(245, 245, 240, 0.75)" }}>
+          <p className="mt-5 max-w-lg text-base leading-relaxed text-pretty sm:text-lg" style={{ color: "var(--text-secondary)" }}>
             {"Hair salon. Hairdresser "}
             <span className="kw-gold">Haircut</span>
             {", "}
@@ -72,7 +72,7 @@ export default function HeroSection() {
           </div>
 
           {/* Trust indicator */}
-          <p className="mt-6 font-mono text-xs tracking-wide" style={{ color: "rgba(245, 245, 240, 0.4)" }}>
+          <p className="mt-6 font-mono text-xs tracking-wide" style={{ color: "var(--text-tertiary)" }}>
             Licensed Professional &middot; Stone Mountain, GA
           </p>
         </div>
@@ -85,7 +85,7 @@ export default function HeroSection() {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center gap-2">
-        <span className="text-xs tracking-widest uppercase" style={{ color: "rgba(245, 245, 240, 0.3)" }}>Scroll</span>
+        <span className="text-xs tracking-widest uppercase" style={{ color: "var(--text-tertiary)" }}>Scroll</span>
         <div className="h-8 w-px" style={{ backgroundImage: "linear-gradient(to bottom, rgba(212, 175, 55, 0.4), transparent)" }} />
       </div>
     </section>

@@ -66,9 +66,9 @@ export default function CTADialog({ isOpen, onClose }: CTADialogProps) {
         <button
           onClick={onClose}
           className="absolute top-4 right-4 flex h-8 w-8 items-center justify-center rounded-full transition-colors"
-          style={{ color: "rgba(245,245,240,0.5)", backgroundColor: "rgba(255,255,255,0.05)" }}
+          style={{ color: "var(--text-muted)", backgroundColor: "rgba(255,255,255,0.05)" }}
           onMouseEnter={(e) => { e.currentTarget.style.color = "rgb(212,175,55)"; e.currentTarget.style.backgroundColor = "rgba(212,175,55,0.12)" }}
-          onMouseLeave={(e) => { e.currentTarget.style.color = "rgba(245,245,240,0.5)"; e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.05)" }}
+          onMouseLeave={(e) => { e.currentTarget.style.color = "var(--text-muted)"; e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.05)" }}
           aria-label="Close"
         >
           <X className="h-4 w-4" />
@@ -82,7 +82,7 @@ export default function CTADialog({ isOpen, onClose }: CTADialogProps) {
           <h2 className="font-serif text-2xl font-bold" style={{ color: "rgb(245,245,240)" }}>
             How would you like to connect?
           </h2>
-          <p className="mt-1 text-sm" style={{ color: "rgba(245,245,240,0.55)" }}>
+          <p className="mt-1 text-sm" style={{ color: "var(--text-muted)" }}>
             Choose the option that works best for you.
           </p>
         </div>
@@ -129,7 +129,7 @@ export default function CTADialog({ isOpen, onClose }: CTADialogProps) {
                 </div>
                 <div>
                   <p className="font-semibold text-sm leading-tight">{opt.label}</p>
-                  <p className="text-xs mt-0.5" style={{ color: "rgba(245,245,240,0.5)" }}>{opt.description}</p>
+                  <p className="text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>{opt.description}</p>
                 </div>
               </a>
             )
@@ -144,7 +144,7 @@ export default function CTADialog({ isOpen, onClose }: CTADialogProps) {
           <p className="font-serif font-semibold" style={{ color: "rgb(212,175,55)" }}>
             {"Consentida's Dominican Hair Salon"}
           </p>
-          <p className="mt-0.5" style={{ color: "rgba(245,245,240,0.5)" }}>
+          <p className="mt-0.5" style={{ color: "var(--text-muted)" }}>
             5226 Stone Mountain Hwy Suite D · Stone Mountain, GA 30087
           </p>
         </div>

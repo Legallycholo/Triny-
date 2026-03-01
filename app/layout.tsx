@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Geist, Geist_Mono, Playfair_Display } from 'next/font/google'
+import { Geist, Geist_Mono, Playfair_Display, Syne } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import GalaxyBackground from '@/components/ui/galaxy-background'
 import { CTAProvider } from '@/components/providers/cta-provider'
@@ -8,6 +8,7 @@ import './globals.css'
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 const _playfair = Playfair_Display({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800", "900"] })
+const syne = Syne({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"], variable: "--font-syne" })
 
 export const metadata: Metadata = {
   title: "BEST Dominican Beauty Salon in Stone Mountain GA | Blowouts, Silk Press & Hair Coloring Near Me",
@@ -92,7 +93,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
       </head>
-      <body className="font-sans antialiased">
+      <body className={`font-sans antialiased ${syne.variable}`}>
         <GalaxyBackground />
         <CTAProvider>
           <div style={{ position: "relative", zIndex: 10 }}>

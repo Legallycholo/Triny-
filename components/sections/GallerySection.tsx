@@ -41,7 +41,7 @@ export default function GallerySection() {
           <h2 className="mt-3 font-serif text-3xl font-bold text-balance sm:text-4xl lg:text-5xl" style={{ color: "rgb(245, 245, 240)" }}>
             The Mastery Gallery
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed" style={{ color: "rgba(245, 245, 240, 0.6)" }}>
+          <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
             Every transformation tells a story of trust, technique, and artistry. Swipe to witness the difference.
           </p>
         </ScrollAnimate>
@@ -72,7 +72,7 @@ export default function GallerySection() {
                     <h3 className="font-serif text-2xl font-semibold" style={{ color: "rgb(212, 175, 55)" }}>
                       {item.label}
                     </h3>
-                    <p className="mt-1 text-sm" style={{ color: "rgba(245, 245, 240, 0.5)" }}>{item.description}</p>
+                    <p className="mt-1 text-sm" style={{ color: "var(--text-muted)" }}>{item.description}</p>
                   </div>
 
                   {/* Before / After Images */}
@@ -90,7 +90,7 @@ export default function GallerySection() {
                         />
                         {/* Before label */}
                         <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-zinc-950/80 to-transparent px-3 py-3">
-                          <span className="font-mono text-xs tracking-widest uppercase" style={{ color: "rgba(245, 245, 240, 0.7)" }}>
+                          <span className="font-mono text-xs tracking-widest uppercase" style={{ color: "var(--text-muted)" }}>
                             Before
                           </span>
                         </div>
@@ -126,30 +126,30 @@ export default function GallerySection() {
           <div className="mt-8 flex items-center justify-center gap-6">
             <button
               className="gallery-prev flex h-10 w-10 items-center justify-center rounded-full border transition-colors"
-              style={{ borderColor: "rgba(245, 245, 240, 0.2)", color: "rgba(245, 245, 240, 0.6)" }}
+              style={{ borderColor: "rgba(245, 245, 240, 0.25)", color: "var(--text-muted)" }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor = "rgb(212, 175, 55)";
                 e.currentTarget.style.color = "rgb(212, 175, 55)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = "rgba(245, 245, 240, 0.2)";
-                e.currentTarget.style.color = "rgba(245, 245, 240, 0.6)";
+                e.currentTarget.style.borderColor = "rgba(245, 245, 240, 0.25)";
+                e.currentTarget.style.color = "var(--text-muted)";
               }}
               aria-label="Previous transformation"
             >
               <ArrowLeft className="h-4 w-4" />
             </button>
-            <div className="gallery-pagination font-mono text-sm tracking-widest" style={{ color: "rgba(245, 245, 240, 0.5)" }} />
+            <div className="gallery-pagination font-mono text-sm tracking-widest" style={{ color: "var(--text-tertiary)" }} />
             <button
               className="gallery-next flex h-10 w-10 items-center justify-center rounded-full border transition-colors"
-              style={{ borderColor: "rgba(245, 245, 240, 0.2)", color: "rgba(245, 245, 240, 0.6)" }}
+              style={{ borderColor: "rgba(245, 245, 240, 0.25)", color: "var(--text-muted)" }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor = "rgb(212, 175, 55)";
                 e.currentTarget.style.color = "rgb(212, 175, 55)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = "rgba(245, 245, 240, 0.2)";
-                e.currentTarget.style.color = "rgba(245, 245, 240, 0.6)";
+                e.currentTarget.style.borderColor = "rgba(245, 245, 240, 0.25)";
+                e.currentTarget.style.color = "var(--text-muted)";
               }}
               aria-label="Next transformation"
             >

@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { Phone, MessageCircle, Instagram, MapPin } from "lucide-react"
 import { useCTA } from "@/components/providers/cta-provider"
 import ScrollAnimate from "@/components/ui/scroll-animate"
@@ -21,7 +22,7 @@ export default function Footer() {
               <span style={{ color: "rgb(212, 175, 55)" }}>Image</span>{" "}
               Today.
             </h2>
-            <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed" style={{ color: "rgba(245, 245, 240, 0.6)" }}>
+            <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
               {"Your journey to healthier, more beautiful hair starts with a single call. Let Triny show you why every client leaves feeling "}
               <span className="italic" style={{ color: "rgba(212, 175, 55, 0.8)" }}>consentida</span>.
             </p>
@@ -42,20 +43,20 @@ export default function Footer() {
               <button
                 onClick={openCTA}
                 className="flex items-center gap-2 text-sm transition-colors"
-                style={{ color: "rgba(245, 245, 240, 0.5)", background: "none", border: "none", cursor: "pointer" }}
+                style={{ color: "var(--text-muted)", background: "none", border: "none", cursor: "pointer" }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "rgb(212, 175, 55)")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(245, 245, 240, 0.5)")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
               >
                 <MessageCircle className="h-4 w-4" />
                 <span>Text Or DM Us</span>
               </button>
-              <span style={{ color: "rgba(245, 245, 240, 0.2)" }}>|</span>
+              <span style={{ color: "var(--text-tertiary)" }}>|</span>
               <button
                 onClick={openCTA}
                 className="flex items-center gap-2 text-sm transition-colors"
-                style={{ color: "rgba(245, 245, 240, 0.5)", background: "none", border: "none", cursor: "pointer" }}
+                style={{ color: "var(--text-muted)", background: "none", border: "none", cursor: "pointer" }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "rgb(212, 175, 55)")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(245, 245, 240, 0.5)")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
               >
                 <Instagram className="h-4 w-4" />
                 <span>DM or Call</span>
@@ -82,29 +83,56 @@ export default function Footer() {
               <p className="font-serif text-sm font-semibold" style={{ color: "rgb(245, 245, 240)" }}>
                 {"Consentida's Dominican Hair Salon"}
               </p>
-              <p className="text-xs" style={{ color: "rgba(245, 245, 240, 0.4)" }}>by Triny</p>
+              <p className="text-xs" style={{ color: "var(--text-tertiary)" }}>by Triny</p>
             </div>
           </div>
 
           {/* Address & Contact */}
           <div className="flex flex-col items-center gap-2 md:items-end">
-            <div className="flex items-center gap-1.5 text-xs" style={{ color: "rgba(245, 245, 240, 0.7)" }}>
+            <div className="flex items-center gap-1.5 text-xs" style={{ color: "var(--text-muted)" }}>
               <MapPin className="h-3 w-3" />
               <span>5226 Stone Mountain Hwy Suite D, Stone Mountain, GA 30087</span>
             </div>
-            <a href="tel:787-964-1826" className="font-mono text-xs tracking-wide font-semibold transition-colors" style={{ color: "rgba(245, 245, 240, 0.5)" }}
+            <a href="tel:787-964-1826" className="font-mono text-xs tracking-wide font-semibold transition-colors" style={{ color: "var(--text-muted)" }}
               onMouseEnter={(e) => (e.currentTarget.style.color = "rgb(212, 175, 55)")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(245, 245, 240, 0.5)")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
             >
               Licensed Professional &middot; 787-964-1826
             </a>
           </div>
         </div>
 
+        {/* Services / SEO category links */}
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-center">
+          <Link href="/beauty-salon" className="text-xs transition-colors hover:opacity-80" style={{ color: "var(--text-muted)" }}>
+            Beauty Salon
+          </Link>
+          <span className="text-xs" style={{ color: "var(--text-tertiary)" }}>·</span>
+          <Link href="/hair-salon" className="text-xs transition-colors hover:opacity-80" style={{ color: "var(--text-muted)" }}>
+            Hair Salon
+          </Link>
+          <span className="text-xs" style={{ color: "var(--text-tertiary)" }}>·</span>
+          <Link href="/hairdresser" className="text-xs transition-colors hover:opacity-80" style={{ color: "var(--text-muted)" }}>
+            Hairdresser
+          </Link>
+        </div>
+
         {/* Copyright */}
         <div className="mt-8 border-t pt-6 text-center" style={{ borderColor: "#27272A" }}>
-          <p className="text-xs" style={{ color: "rgba(245, 245, 240, 0.25)" }}>
+          <p className="text-xs" style={{ color: "var(--text-tertiary)" }}>
             {`\u00A9 ${new Date().getFullYear()} Consentida's Dominican Hair Salon by Triny. All rights reserved.`}
+          </p>
+          <p className="mt-2 text-xs" style={{ color: "var(--text-tertiary)" }}>
+            Website local SEO by{" "}
+            <a
+              href="https://www.tanymarketing.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:opacity-80"
+              style={{ color: "var(--text-muted)" }}
+            >
+              TanyMarketing
+            </a>
           </p>
         </div>
       </div>

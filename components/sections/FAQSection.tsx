@@ -76,7 +76,7 @@ export default function FAQSection() {
                 >
                   {item.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-sm leading-relaxed" style={{ color: "rgba(245, 245, 240, 0.7)" }}>
+                <AccordionContent className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
                   {item.answer}
                 </AccordionContent>
               </AccordionItem>

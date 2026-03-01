@@ -93,7 +93,7 @@ export default function ServicesSection() {
           <h2 className="mt-3 font-serif text-3xl font-bold text-balance sm:text-4xl lg:text-5xl" style={{ color: "rgb(245, 245, 240)" }}>
             The Investment
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed" style={{ color: "rgba(245, 245, 240, 0.7)" }}>
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
             {"From precision cuts to clinical scalp restoration, every service is delivered with 21+ years of mastery. Because you deserve to be "}
             <span className="italic" style={{ color: "rgb(201, 169, 97)" }}>consentida</span>.
           </p>
@@ -104,9 +104,9 @@ export default function ServicesSection() {
           <button
             onClick={() => setPricingTooltip(!pricingTooltip)}
             className="flex items-center gap-1.5 text-sm transition-colors"
-            style={{ color: "rgb(113, 113, 122)" }}
+            style={{ color: "var(--text-muted)" }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "rgb(212, 175, 55)")}
-            onMouseLeave={(e) => (e.currentTarget.style.color = "rgb(113, 113, 122)")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
             aria-expanded={pricingTooltip}
           >
             <HelpCircle className="h-4 w-4" />
@@ -114,7 +114,7 @@ export default function ServicesSection() {
           </button>
         </ScrollAnimate>
         {pricingTooltip && (
-          <div className="mx-auto mt-3 max-w-md rounded-lg border bg-zinc-950/60 backdrop-blur-md px-5 py-4 text-center text-sm leading-relaxed" style={{ borderColor: "rgba(212, 175, 55, 0.2)", color: "rgba(245, 245, 240, 0.8)" }}>
+          <div className="mx-auto mt-3 max-w-md rounded-lg border bg-zinc-950/60 backdrop-blur-md px-5 py-4 text-center text-sm leading-relaxed" style={{ borderColor: "rgba(212, 175, 55, 0.2)", color: "var(--text-muted)" }}>
             We must know the length of your hair and current health for fair pricing for all of our customers. Every head of hair is unique.
             <a
               href="tel:787-964-1826"
@@ -153,7 +153,7 @@ export default function ServicesSection() {
                       <li
                         key={service}
                         className="flex items-start gap-2 text-sm"
-                        style={{ color: "rgba(245, 245, 240, 0.7)" }}
+                        style={{ color: "var(--text-muted)" }}
                       >
                         <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-champagne" />
                         {service}
@@ -168,7 +168,7 @@ export default function ServicesSection() {
 
         {/* Bottom CTA */}
         <ScrollAnimate className="mt-14 text-center" delay={0.2}>
-          <p className="mb-4 text-sm" style={{ color: "rgba(245, 245, 240, 0.5)" }}>
+          <p className="mb-4 text-sm" style={{ color: "var(--text-muted)" }}>
             Final investment determined during your 1-on-1 artistry consultation.
           </p>
           <a

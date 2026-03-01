@@ -6,6 +6,9 @@ import { Phone, Menu, X, Instagram } from "lucide-react"
 import { useCTA } from "@/components/providers/cta-provider"
 
 const NAV_LINKS = [
+  { label: "Beauty Salon", href: "/beauty-salon" },
+  { label: "Hair Salon", href: "/hair-salon" },
+  { label: "Hairdresser", href: "/hairdresser" },
   { label: "Services", href: "#services" },
   { label: "Gallery", href: "#gallery" },
   { label: "Reviews", href: "#reviews" },
@@ -39,16 +42,16 @@ export default function Header() {
           </div>
         </a>
 
-        {/* Desktop Nav */}
-        <nav className="hidden items-center gap-8 lg:flex" aria-label="Main navigation">
+        {/* Desktop Nav: main keywords + on-page links */}
+        <nav className="hidden items-center gap-6 xl:gap-8 lg:flex" aria-label="Main navigation">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
               className="text-sm font-medium tracking-wide transition-colors duration-200"
-              style={{ color: "rgba(245, 245, 240, 0.8)" }}
+              style={{ color: "var(--text-muted)" }}
               onMouseEnter={(e) => (e.currentTarget.style.color = "rgb(212, 175, 55)")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(245, 245, 240, 0.8)")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
             >
               {link.label}
             </a>
@@ -62,9 +65,9 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 text-sm transition-colors"
-            style={{ color: "rgba(245, 245, 240, 0.7)" }}
+            style={{ color: "var(--text-muted)" }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "rgb(212, 175, 55)")}
-            onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(245, 245, 240, 0.7)")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
             aria-label="Visit our Instagram"
           >
             <Instagram className="h-4 w-4" />
@@ -100,9 +103,9 @@ export default function Header() {
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
                 className="border-b py-3 text-sm font-medium tracking-wide transition-colors"
-                style={{ borderColor: "#27272A", color: "rgba(245, 245, 240, 0.8)" }}
+                style={{ borderColor: "#27272A", color: "var(--text-muted)" }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "rgb(212, 175, 55)")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(245, 245, 240, 0.8)")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
               >
                 {link.label}
               </a>
