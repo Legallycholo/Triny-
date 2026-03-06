@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Phone } from "lucide-react"
-import { useCTA } from "@/components/providers/cta-provider"
 import {
   ServicePageContainer,
   ServiceSection,
@@ -124,8 +123,10 @@ export default function BalayagePage() {
   )
 }
 
+"use client"
+import { useCTA } from "@/components/providers/cta-provider"
+
 function BalayageCTAButton() {
-  "use client"
   const { openCTA } = useCTA()
   return (
     <button
