@@ -1,15 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { Phone } from "lucide-react"
-import {
-  ServicePageContainer,
-  ServiceSection,
-  ServiceHeading,
-  ServiceSubheading,
-  ServiceText,
-  ServiceList,
-  CTAButton,
-} from "@/components/sections/ServicePageContainer"
+import { ArrowLeft } from "lucide-react"
+import { ServiceCTAButton } from "@/components/sections/ServiceCTAButton"
 
 export const metadata: Metadata = {
   title: "Eyebrow Tinting in Stone Mountain GA | Consentida's by Triny",
@@ -49,90 +41,137 @@ const jsonLd = {
   ],
 }
 
+const cardBg = "rgba(15, 12, 28, 0.6)"
+const cardBorder = "rgba(212, 175, 55, 0.2)"
+const textPrimary = "rgb(245, 245, 240)"
+const textMuted = "rgba(245, 245, 240, 0.88)"
+const ctaBg = "rgba(212, 175, 55, 0.1)"
+
 export default function EyebrowTintingPage() {
   return (
     <div data-seo-page className="min-h-screen pt-16">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <nav aria-label="Breadcrumb" className="px-6 py-3 text-sm text-gray-500">
-        <ol className="flex gap-2">
-          <li><Link href="/" className="hover:underline">Home</Link></li>
-          <li>/</li>
-          <li><Link href="/beauty-salon" className="hover:underline">Beauty Salon</Link></li>
-          <li>/</li>
-          <li className="text-gray-900 font-medium dark:text-gray-100">Eyebrow Tinting</li>
-        </ol>
-      </nav>
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-8 sm:space-y-12">
-        <ServicePageContainer variant="default" className="sm:max-w-full">
-          <div>
-            <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-white text-balance">Eyebrow Tinting in Stone Mountain, GA</h1>
-            <ServiceText className="text-lg">
-              Looking for Eyebrow Tinting near you in Stone Mountain, GA? Consentida&apos;s Dominican
-              Salon By Triny delivers expert Eyebrow Tinting with over 21 years of professional
-              experience. Every client leaves feeling consentida — spoiled with care.
-            </ServiceText>
-          </div>
-        </ServicePageContainer>
 
-        <ServicePageContainer variant="default">
-          <ServiceSection>
-            <ServiceSubheading>What to Expect</ServiceSubheading>
-            <ServiceText>
-              Eyebrow tinting adds color to your brows, making them look fuller and more defined. It's perfect if your brows are lighter than your hair or if you want a bolder look without daily makeup. Triny chooses a custom shade to match your skin tone and hair color. The tint lasts 2–4 weeks and takes just minutes.
-            </ServiceText>
-          </ServiceSection>
-        </ServicePageContainer>
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        {/* Back button + breadcrumb */}
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-8">
+          <Link
+            href="/beauty-salon"
+            className="inline-flex items-center gap-2 self-start rounded-full border px-4 py-2.5 text-sm font-medium backdrop-blur-md transition-all duration-200 hover:scale-[1.02]"
+            style={{ background: cardBg, borderColor: cardBorder, color: textPrimary }}
+          >
+            <ArrowLeft className="h-4 w-4 shrink-0" />
+            <span>Back to Beauty Salon</span>
+          </Link>
+          <nav aria-label="Breadcrumb" className="text-sm" style={{ color: textMuted }}>
+            <ol className="flex gap-2">
+              <li><Link href="/" className="hover:underline" style={{ color: textMuted }}>Home</Link></li>
+              <li>/</li>
+              <li><Link href="/beauty-salon" className="hover:underline" style={{ color: textMuted }}>Beauty Salon</Link></li>
+              <li>/</li>
+              <li className="font-medium" style={{ color: textPrimary }}>Eyebrow Tinting</li>
+            </ol>
+          </nav>
+        </div>
 
-        <ServicePageContainer variant="default">
-          <ServiceSection>
-            <ServiceSubheading>Why Stone Mountain Clients Choose Consentida&apos;s</ServiceSubheading>
-            <ServiceList items={[
+        {/* Intro section */}
+        <section
+          className="rounded-2xl border p-6 sm:p-8 mb-8 backdrop-blur-md"
+          style={{ background: cardBg, borderColor: cardBorder }}
+        >
+          <h1 className="text-3xl sm:text-4xl font-bold mb-4" style={{ color: textPrimary }}>
+            Eyebrow Tinting in Stone Mountain, GA
+          </h1>
+          <p className="text-lg leading-relaxed max-w-2xl" style={{ color: textMuted }}>
+            Looking for Eyebrow Tinting near you in Stone Mountain, GA? Consentida&apos;s Dominican
+            Salon By Triny delivers expert Eyebrow Tinting with over 21 years of professional
+            experience. Every client leaves feeling consentida — spoiled with care.
+          </p>
+        </section>
+
+        {/* What to Expect */}
+        <section
+          className="rounded-2xl border p-6 sm:p-8 mb-8 backdrop-blur-md"
+          style={{ background: cardBg, borderColor: cardBorder }}
+        >
+          <h2 className="text-xl sm:text-2xl font-semibold mb-4" style={{ color: textPrimary }}>
+            What to Expect
+          </h2>
+          <p className="leading-relaxed" style={{ color: textMuted }}>
+            Eyebrow tinting adds color to your brows, making them look fuller and more defined. 
+            It&apos;s perfect if your brows are lighter than your hair or if you want a bolder look 
+            without daily makeup. Triny chooses a custom shade to match your skin tone and hair color. 
+            The tint lasts 2–4 weeks and takes just minutes.
+          </p>
+        </section>
+
+        {/* Why Choose Us */}
+        <section
+          className="rounded-2xl border p-6 sm:p-8 mb-8 backdrop-blur-md"
+          style={{ background: cardBg, borderColor: cardBorder }}
+        >
+          <h2 className="text-xl sm:text-2xl font-semibold mb-4" style={{ color: textPrimary }}>
+            Why Stone Mountain Clients Choose Consentida&apos;s
+          </h2>
+          <ul className="space-y-3">
+            {[
               "21+ years of licensed professional experience",
               "Personalized consultation before every service",
               "Serving Stone Mountain, Lithonia, Clarkston & Tucker, GA",
               "Consentidas Guarantee — complimentary refinement within 14 days",
-            ]} />
-          </ServiceSection>
-        </ServicePageContainer>
+            ].map((item, idx) => (
+              <li key={idx} className="flex items-start gap-3" style={{ color: textMuted }}>
+                <span className="h-2 w-2 rounded-full mt-2 flex-shrink-0" style={{ background: "rgb(212, 175, 55)" }} />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
 
-        <ServicePageContainer variant="related">
-          <ServiceSection>
-            <ServiceSubheading>Explore More Beauty Salon Services</ServiceSubheading>
-            <div className="flex flex-wrap gap-3">
-              <Link href="/beauty-salon/eyebrow-threading" className="text-amber-400 hover:text-amber-300 transition">Eyebrow Threading</Link>
-              <span className="text-amber-400">/</span>
-              <Link href="/beauty-salon/eyelash-extensions" className="text-amber-400 hover:text-amber-300 transition">Eyelash Extensions</Link>
-              <span className="text-amber-400">/</span>
-              <Link href="/beauty-salon/lash-lift" className="text-amber-400 hover:text-amber-300 transition">Lash Lift</Link>
-            </div>
-          </ServiceSection>
-        </ServicePageContainer>
+        {/* Related Services */}
+        <section
+          className="rounded-2xl border p-5 sm:p-6 mb-8 backdrop-blur-md"
+          style={{ background: cardBg, borderColor: cardBorder }}
+        >
+          <h2 className="text-lg font-semibold mb-2" style={{ color: textPrimary }}>
+            Explore More Beauty Salon Services
+          </h2>
+          <div className="flex flex-wrap gap-3">
+            <Link href="/beauty-salon/eyebrow-threading" className="text-sm font-medium hover:underline" style={{ color: "rgb(212, 175, 55)" }}>
+              Eyebrow Threading
+            </Link>
+            <span style={{ color: textMuted }}>/</span>
+            <Link href="/beauty-salon/eyelash-extensions" className="text-sm font-medium hover:underline" style={{ color: "rgb(212, 175, 55)" }}>
+              Eyelash Extensions
+            </Link>
+            <span style={{ color: textMuted }}>/</span>
+            <Link href="/beauty-salon/lash-lift" className="text-sm font-medium hover:underline" style={{ color: "rgb(212, 175, 55)" }}>
+              Lash Lift
+            </Link>
+          </div>
+        </section>
 
-        <ServicePageContainer variant="cta">
-          <ServiceSubheading className="mb-6">Book Your Eyebrow Tinting in Stone Mountain</ServiceSubheading>
-          <ServiceText className="mb-6">
+        {/* CTA Block */}
+        <section
+          className="rounded-2xl border-2 p-8 sm:p-10 text-center backdrop-blur-md"
+          style={{
+            background: ctaBg,
+            borderColor: "rgba(212, 175, 55, 0.4)",
+            boxShadow: "0 0 40px rgba(212, 175, 55, 0.08)",
+          }}
+        >
+          <h2 className="text-2xl sm:text-3xl font-semibold mb-2" style={{ color: textPrimary }}>
+            Book Your Eyebrow Tinting Appointment
+          </h2>
+          <p className="mb-6 max-w-md mx-auto" style={{ color: textMuted }}>
             Call or text to schedule your consultation. Walk-ins welcome when available.
-          </ServiceText>
-          <TintingCTAButton />
-          <p className="text-sm text-gray-400 mt-6">5226 Stone Mountain Hwy Suite D, Stone Mountain, GA 30087</p>
-        </ServicePageContainer>
+          </p>
+          <ServiceCTAButton />
+          <p className="text-sm mt-4" style={{ color: textMuted }}>
+            5226 Stone Mountain Hwy Suite D, Stone Mountain, GA 30087
+          </p>
+        </section>
       </main>
     </div>
-  )
-}
-
-"use client"
-import { useCTA } from "@/components/providers/cta-provider"
-
-function TintingCTAButton() {
-  const { openCTA } = useCTA()
-  return (
-    <button
-      onClick={openCTA}
-      className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 px-10 py-4 text-lg font-bold text-black transition-all duration-300 hover:from-amber-300 hover:to-amber-400 hover:shadow-lg hover:shadow-amber-500/50 active:scale-95"
-    >
-      <Phone className="h-5 w-5" />
-      <span>Book Your Consultation<br className="hidden sm:block" />Call Today</span>
-    </button>
   )
 }
