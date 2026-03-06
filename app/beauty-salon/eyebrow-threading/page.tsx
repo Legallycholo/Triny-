@@ -1,5 +1,16 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import { Phone } from "lucide-react"
+import { useCTA } from "@/components/providers/cta-provider"
+import {
+  ServicePageContainer,
+  ServiceSection,
+  ServiceHeading,
+  ServiceSubheading,
+  ServiceText,
+  ServiceList,
+  CTAButton,
+} from "@/components/sections/ServicePageContainer"
 
 export const metadata: Metadata = {
   title: "Eyebrow Threading in Stone Mountain GA | Consentida's by Triny",
@@ -52,43 +63,75 @@ export default function EyebrowThreadingPage() {
           <li className="text-gray-900 font-medium dark:text-gray-100">Eyebrow Threading</li>
         </ol>
       </nav>
-      <main className="max-w-4xl mx-auto px-6 py-12">
-        <h1 className="text-4xl font-bold mb-4">Eyebrow Threading in Stone Mountain, GA</h1>
-        <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-          Looking for Eyebrow Threading near you in Stone Mountain, GA? Consentida&apos;s Dominican
-          Salon By Triny delivers expert Eyebrow Threading with over 21 years of professional
-          experience. Every client leaves feeling consentida — spoiled with care.
-        </p>
-        <section className="mb-10">
-          <h2 className="text-2xl font-semibold mb-3">What to Expect</h2>
-          <p className="text-gray-700 dark:text-gray-300">
-            Threading removes unwanted hair with a thin cotton thread for precise, clean lines with less irritation than waxing — ideal for sensitive skin. Triny shapes your brows to flatter your face and keeps the arch and tail sharp. Many Stone Mountain clients prefer threading for its accuracy and the fact that it doesn&apos;t pull on delicate skin.
-          </p>
-        </section>
-        <section className="mb-10">
-          <h2 className="text-2xl font-semibold mb-3">Why Stone Mountain Clients Choose Consentida&apos;s</h2>
-          <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
-            <li>21+ years of licensed professional experience</li>
-            <li>Personalized consultation before every service</li>
-            <li>Serving Stone Mountain, Lithonia, Clarkston & Tucker, GA</li>
-            <li>Consentidas Guarantee — complimentary refinement within 14 days</li>
-          </ul>
-        </section>
-        <section className="mb-10">
-          <h2 className="text-2xl font-semibold mb-3">Explore More Beauty Salon Services</h2>
-          <div className="flex flex-wrap gap-3">
-            <Link href="/beauty-salon/eyebrow-tinting" className="text-gray-700 dark:text-gray-300 hover:underline">Eyebrow Tinting</Link>
-            <Link href="/beauty-salon/eyelash-extensions" className="text-gray-700 dark:text-gray-300 hover:underline">Eyelash Extensions</Link>
-            <Link href="/beauty-salon/lash-lift" className="text-gray-700 dark:text-gray-300 hover:underline">Lash Lift</Link>
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-8 sm:space-y-12">
+        <ServicePageContainer variant="default" className="sm:max-w-full">
+          <div>
+            <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-white text-balance">Eyebrow Threading in Stone Mountain, GA</h1>
+            <ServiceText className="text-lg">
+              Looking for Eyebrow Threading near you in Stone Mountain, GA? Consentida&apos;s Dominican
+              Salon By Triny delivers expert Eyebrow Threading with over 21 years of professional
+              experience. Every client leaves feeling consentida — spoiled with care.
+            </ServiceText>
           </div>
-        </section>
-        <section className="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-8 text-center">
-          <h2 className="text-2xl font-semibold mb-2">Book Your Eyebrow Threading in Stone Mountain</h2>
-          <p className="text-gray-600 dark:text-gray-400 mb-4">Call or text to schedule your consultation. Walk-ins welcome when available.</p>
-          <a href="tel:787-964-1826" className="inline-block bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition dark:bg-white dark:text-black dark:hover:bg-gray-200">Call 787-964-1826</a>
-          <p className="text-sm text-gray-500 dark:text-gray-400 mt-3">5226 Stone Mountain Hwy Suite D, Stone Mountain, GA 30087</p>
-        </section>
+        </ServicePageContainer>
+
+        <ServicePageContainer variant="default">
+          <ServiceSection>
+            <ServiceSubheading>What to Expect</ServiceSubheading>
+            <ServiceText>
+              Threading uses a twisted thread to gently remove fine hairs, creating perfectly shaped brows with clean lines. It's fast, precise, and ideal for delicate skin. Triny threads your brows to suit your face shape, then tints them if you'd like. Stone Mountain clients love threading for the sharp definition and minimal irritation.
+            </ServiceText>
+          </ServiceSection>
+        </ServicePageContainer>
+
+        <ServicePageContainer variant="default">
+          <ServiceSection>
+            <ServiceSubheading>Why Stone Mountain Clients Choose Consentida&apos;s</ServiceSubheading>
+            <ServiceList items={[
+              "21+ years of licensed professional experience",
+              "Personalized consultation before every service",
+              "Serving Stone Mountain, Lithonia, Clarkston & Tucker, GA",
+              "Consentidas Guarantee — complimentary refinement within 14 days",
+            ]} />
+          </ServiceSection>
+        </ServicePageContainer>
+
+        <ServicePageContainer variant="related">
+          <ServiceSection>
+            <ServiceSubheading>Explore More Beauty Salon Services</ServiceSubheading>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/beauty-salon/eyebrow-tinting" className="text-amber-400 hover:text-amber-300 transition">Eyebrow Tinting</Link>
+              <span className="text-amber-400">/</span>
+              <Link href="/beauty-salon/eyelash-extensions" className="text-amber-400 hover:text-amber-300 transition">Eyelash Extensions</Link>
+              <span className="text-amber-400">/</span>
+              <Link href="/beauty-salon/lash-lift" className="text-amber-400 hover:text-amber-300 transition">Lash Lift</Link>
+            </div>
+          </ServiceSection>
+        </ServicePageContainer>
+
+        <ServicePageContainer variant="cta">
+          <ServiceSubheading className="mb-6">Book Your Eyebrow Threading in Stone Mountain</ServiceSubheading>
+          <ServiceText className="mb-6">
+            Call or text to schedule your consultation. Walk-ins welcome when available.
+          </ServiceText>
+          <ThreadingCTAButton />
+          <p className="text-sm text-gray-400 mt-6">5226 Stone Mountain Hwy Suite D, Stone Mountain, GA 30087</p>
+        </ServicePageContainer>
       </main>
     </div>
+  )
+}
+
+function ThreadingCTAButton() {
+  "use client"
+  const { openCTA } = useCTA()
+  return (
+    <button
+      onClick={openCTA}
+      className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 px-10 py-4 text-lg font-bold text-black transition-all duration-300 hover:from-amber-300 hover:to-amber-400 hover:shadow-lg hover:shadow-amber-500/50 active:scale-95"
+    >
+      <Phone className="h-5 w-5" />
+      <span>Book Your Consultation<br className="hidden sm:block" />Call Today</span>
+    </button>
   )
 }

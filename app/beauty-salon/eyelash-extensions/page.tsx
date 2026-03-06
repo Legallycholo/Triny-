@@ -1,5 +1,16 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import { Phone } from "lucide-react"
+import { useCTA } from "@/components/providers/cta-provider"
+import {
+  ServicePageContainer,
+  ServiceSection,
+  ServiceHeading,
+  ServiceSubheading,
+  ServiceText,
+  ServiceList,
+  CTAButton,
+} from "@/components/sections/ServicePageContainer"
 
 export const metadata: Metadata = {
   title: "Eyelash Extensions in Stone Mountain GA | Consentida's by Triny",
@@ -52,43 +63,75 @@ export default function EyelashExtensionsPage() {
           <li className="text-gray-900 font-medium dark:text-gray-100">Eyelash Extensions</li>
         </ol>
       </nav>
-      <main className="max-w-4xl mx-auto px-6 py-12">
-        <h1 className="text-4xl font-bold mb-4">Eyelash Extensions in Stone Mountain, GA</h1>
-        <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-          Looking for Eyelash Extensions near you in Stone Mountain, GA? Consentida&apos;s Dominican
-          Salon By Triny delivers expert Eyelash Extensions with over 21 years of professional
-          experience. Every client leaves feeling consentida — spoiled with care.
-        </p>
-        <section className="mb-10">
-          <h2 className="text-2xl font-semibold mb-3">What to Expect</h2>
-          <p className="text-gray-700 dark:text-gray-300">
-            We apply individual lash extensions by hand for a natural, full look — whether you prefer classic length or dramatic volume. You relax while we customize the curl, length, and density to suit your eyes and lifestyle. Triny uses quality products and gentle technique, and we&apos;ll walk you through simple aftercare so your lashes last beautifully between fills.
-          </p>
-        </section>
-        <section className="mb-10">
-          <h2 className="text-2xl font-semibold mb-3">Why Stone Mountain Clients Choose Consentida&apos;s</h2>
-          <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
-            <li>21+ years of licensed professional experience</li>
-            <li>Personalized consultation before every service</li>
-            <li>Serving Stone Mountain, Lithonia, Clarkston & Tucker, GA</li>
-            <li>Consentidas Guarantee — complimentary refinement within 14 days</li>
-          </ul>
-        </section>
-        <section className="mb-10">
-          <h2 className="text-2xl font-semibold mb-3">Explore More Beauty Salon Services</h2>
-          <div className="flex flex-wrap gap-3">
-            <Link href="/beauty-salon/eyebrow-tinting" className="text-gray-700 dark:text-gray-300 hover:underline">Eyebrow Tinting</Link>
-            <Link href="/beauty-salon/eyebrow-threading" className="text-gray-700 dark:text-gray-300 hover:underline">Eyebrow Threading</Link>
-            <Link href="/beauty-salon/lash-lift" className="text-gray-700 dark:text-gray-300 hover:underline">Lash Lift</Link>
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-8 sm:space-y-12">
+        <ServicePageContainer variant="default" className="sm:max-w-full">
+          <div>
+            <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-white text-balance">Eyelash Extensions in Stone Mountain, GA</h1>
+            <ServiceText className="text-lg">
+              Looking for Eyelash Extensions near you in Stone Mountain, GA? Consentida&apos;s Dominican
+              Salon By Triny delivers expert Eyelash Extensions with over 21 years of professional
+              experience. Every client leaves feeling consentida — spoiled with care.
+            </ServiceText>
           </div>
-        </section>
-        <section className="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-8 text-center">
-          <h2 className="text-2xl font-semibold mb-2">Book Your Eyelash Extensions in Stone Mountain</h2>
-          <p className="text-gray-600 dark:text-gray-400 mb-4">Call or text to schedule your consultation. Walk-ins welcome when available.</p>
-          <a href="tel:787-964-1826" className="inline-block bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition dark:bg-white dark:text-black dark:hover:bg-gray-200">Call 787-964-1826</a>
-          <p className="text-sm text-gray-500 dark:text-gray-400 mt-3">5226 Stone Mountain Hwy Suite D, Stone Mountain, GA 30087</p>
-        </section>
+        </ServicePageContainer>
+
+        <ServicePageContainer variant="default">
+          <ServiceSection>
+            <ServiceSubheading>What to Expect</ServiceSubheading>
+            <ServiceText>
+              Eyelash extensions are individual synthetic lashes applied to your natural lashes to add length, volume, and dramatic curl. Triny chooses the right length, curl, and thickness to enhance your eye shape. Results last 3–5 weeks with proper care. Maintenance appointments keep them looking full and fabulous.
+            </ServiceText>
+          </ServiceSection>
+        </ServicePageContainer>
+
+        <ServicePageContainer variant="default">
+          <ServiceSection>
+            <ServiceSubheading>Why Stone Mountain Clients Choose Consentida&apos;s</ServiceSubheading>
+            <ServiceList items={[
+              "21+ years of licensed professional experience",
+              "Personalized consultation before every service",
+              "Serving Stone Mountain, Lithonia, Clarkston & Tucker, GA",
+              "Consentidas Guarantee — complimentary refinement within 14 days",
+            ]} />
+          </ServiceSection>
+        </ServicePageContainer>
+
+        <ServicePageContainer variant="related">
+          <ServiceSection>
+            <ServiceSubheading>Explore More Beauty Salon Services</ServiceSubheading>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/beauty-salon/eyebrow-threading" className="text-amber-400 hover:text-amber-300 transition">Eyebrow Threading</Link>
+              <span className="text-amber-400">/</span>
+              <Link href="/beauty-salon/eyebrow-tinting" className="text-amber-400 hover:text-amber-300 transition">Eyebrow Tinting</Link>
+              <span className="text-amber-400">/</span>
+              <Link href="/beauty-salon/lash-lift" className="text-amber-400 hover:text-amber-300 transition">Lash Lift</Link>
+            </div>
+          </ServiceSection>
+        </ServicePageContainer>
+
+        <ServicePageContainer variant="cta">
+          <ServiceSubheading className="mb-6">Book Your Eyelash Extensions in Stone Mountain</ServiceSubheading>
+          <ServiceText className="mb-6">
+            Call or text to schedule your consultation. Walk-ins welcome when available.
+          </ServiceText>
+          <ExtensionsCTAButton />
+          <p className="text-sm text-gray-400 mt-6">5226 Stone Mountain Hwy Suite D, Stone Mountain, GA 30087</p>
+        </ServicePageContainer>
       </main>
     </div>
+  )
+}
+
+function ExtensionsCTAButton() {
+  "use client"
+  const { openCTA } = useCTA()
+  return (
+    <button
+      onClick={openCTA}
+      className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 px-10 py-4 text-lg font-bold text-black transition-all duration-300 hover:from-amber-300 hover:to-amber-400 hover:shadow-lg hover:shadow-amber-500/50 active:scale-95"
+    >
+      <Phone className="h-5 w-5" />
+      <span>Book Your Consultation<br className="hidden sm:block" />Call Today</span>
+    </button>
   )
 }
