@@ -184,7 +184,53 @@
   /* SEO pages: ensure text is visible on dark galaxy background */
   [data-seo-page] {
     color: var(--text-primary);
+    position: relative;
   }
+  
+  /* Semi-transparent overlay for entire content area */
+  [data-seo-page] > nav,
+  [data-seo-page] > main {
+    position: relative;
+    z-index: 1;
+  }
+  
+  [data-seo-page] > nav::before,
+  [data-seo-page] > main::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(9, 9, 11, 0.85) 0%,
+      rgba(9, 9, 11, 0.75) 50%,
+      rgba(9, 9, 11, 0.85) 100%
+    );
+    border-radius: 0.75rem;
+    z-index: -1;
+    pointer-events: none;
+  }
+  
+  [data-seo-page] > nav::before {
+    border-radius: 0;
+    background: rgba(9, 9, 11, 0.8);
+  }
+  
+  [data-seo-page] > main {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 2rem 1.5rem;
+    border-radius: 0.75rem;
+    margin-bottom: 2rem;
+  }
+  
+  @media (min-width: 640px) {
+    [data-seo-page] > main {
+      margin-left: auto;
+      margin-right: auto;
+      padding: 3rem 2.5rem;
+    }
+  }
+  
   [data-seo-page] .text-gray-500,
   [data-seo-page] .text-gray-600,
   [data-seo-page] .text-gray-700,
@@ -210,8 +256,10 @@
   [data-seo-page] .dark\:border-gray-700 {
     border-color: rgba(245, 245, 240, 0.2);
   }
-  [data-seo-page] .dark\:bg-gray-800\/50 {
-    background: rgba(245, 245, 240, 0.06);
+  [data-seo-page] .dark\:bg-gray-800\/50,
+  [data-seo-page] .bg-gray-50 {
+    background: rgba(245, 245, 240, 0.08);
+    backdrop-filter: blur(8px);
   }
 }
 
