@@ -6,6 +6,17 @@ export const metadata: Metadata = {
   title: "Beauty Salon in Stone Mountain GA | Consentida's by Triny",
   description:
     "Looking for Beauty Salon in Stone Mountain, GA? Consentida's Dominican Salon By Triny offers expert Beauty Salon services near you. Call 787-964-1826.",
+  keywords: [
+    "Beauty Salon Stone Mountain GA",
+    "Eyebrow Threading near me",
+    "Eyelash Extensions Lithonia",
+    "Eyebrow Tinting Tucker GA",
+    "Lash Lift Clarkston",
+    "Dominican Beauty Salon Georgia",
+  ],
+  alternates: {
+    canonical: "https://consentidassalon.com/beauty-salon",
+  },
 }
 
 const jsonLd = {
@@ -16,13 +27,13 @@ const jsonLd = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://v0-triny.vercel.app/",
+      item: "https://consentidassalon.com/",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Beauty Salon",
-      item: "https://v0-triny.vercel.app/beauty-salon",
+      item: "https://consentidassalon.com/beauty-salon",
     },
   ],
 }

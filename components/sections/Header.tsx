@@ -1,14 +1,11 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
 import { Phone, Menu, X, Instagram } from "lucide-react"
 import { useCTA } from "@/components/providers/cta-provider"
 
 const NAV_LINKS = [
-  { label: "Beauty Salon", href: "/beauty-salon" },
-  { label: "Hair Salon", href: "/hair-salon" },
-  { label: "Hairdresser", href: "/hairdresser" },
   { label: "Services", href: "#services" },
   { label: "Gallery", href: "#gallery" },
   { label: "Reviews", href: "#reviews" },
@@ -17,10 +14,25 @@ const NAV_LINKS = [
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const { openCTA } = useCTA()
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50)
+    }
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/20 backdrop-blur-md border-b" style={{ borderColor: "rgba(212, 175, 55, 0.2)" }}>
+    <header 
+      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b transition-all duration-300" 
+      style={{ 
+        borderColor: "rgba(212, 175, 55, 0.2)",
+        backgroundColor: scrolled ? "rgba(9, 9, 11, 0.85)" : "rgba(9, 9, 11, 0.2)",
+      }}
+    >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-8">
         {/* Logo */}
         <a href="#" className="flex shrink-0 items-center gap-3">

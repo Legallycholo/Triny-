@@ -5,6 +5,8 @@ export const metadata: Metadata = {
   title: "Highlights in Stone Mountain GA | Consentida's by Triny",
   description:
     "Expert Highlights in Stone Mountain, GA near you. Consentida's Dominican Salon By Triny — 21+ years of experience. Call 787-964-1826 to book.",
+  keywords: ["Highlights Stone Mountain GA", "Hair Highlights near me", "Foil Highlights Lithonia", "Dominican Highlights Georgia"],
+  alternates: { canonical: "https://consentidassalon.com/hair-salon/highlights" },
 }
 
 const jsonLd = {
@@ -13,15 +15,15 @@ const jsonLd = {
     {
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://v0-triny.vercel.app/" },
-        { "@type": "ListItem", position: 2, name: "Hair Salon", item: "https://v0-triny.vercel.app/hair-salon" },
-        { "@type": "ListItem", position: 3, name: "Highlights", item: "https://v0-triny.vercel.app/hair-salon/highlights" },
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://consentidassalon.com/" },
+        { "@type": "ListItem", position: 2, name: "Hair Salon", item: "https://consentidassalon.com/hair-salon" },
+        { "@type": "ListItem", position: 3, name: "Highlights", item: "https://consentidassalon.com/hair-salon/highlights" },
       ],
     },
     {
       "@type": "LocalBusiness",
       name: "Consentida's Dominican Salon By Triny",
-      url: "https://v0-triny.vercel.app/",
+      url: "https://consentidassalon.com/",
       telephone: "+17879641826",
       address: {
         "@type": "PostalAddress",
@@ -31,7 +33,7 @@ const jsonLd = {
         postalCode: "30087",
         addressCountry: "US",
       },
-      geo: { "@type": "GeoCoordinates", latitude: 33.8073, longitude: -84.1701 },
+      geo: { "@type": "GeoCoordinates", latitude: 33.8118, longitude: -84.0722 },
       priceRange: "$$",
     },
   ],
