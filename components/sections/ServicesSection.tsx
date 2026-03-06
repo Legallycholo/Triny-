@@ -81,6 +81,7 @@ const SERVICE_CATEGORIES = [
 
 export default function ServicesSection() {
   const [pricingTooltip, setPricingTooltip] = useState(false)
+  const { openCTA } = useCTA()
 
   return (
     <section id="services" className="py-20 lg:py-28">
@@ -171,13 +172,13 @@ export default function ServicesSection() {
           <p className="mb-4 text-sm" style={{ color: "var(--text-muted)" }}>
             Final investment determined during your 1-on-1 artistry consultation.
           </p>
-          <a
-            href="tel:787-964-1826"
+          <button
+            onClick={openCTA}
             className="btn-glow celestial-glow inline-flex items-center gap-2.5 rounded-full px-8 py-4 text-base font-semibold tracking-wide"
           >
             <Phone className="h-5 w-5" />
-            <span>Book Your Consultation</span>
-          </a>
+            <span>Book Your Consultation<br className="hidden sm:block" />Call Today</span>
+          </button>
         </ScrollAnimate>
       </div>
     </section>
