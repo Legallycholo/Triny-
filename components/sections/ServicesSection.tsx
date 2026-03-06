@@ -1,7 +1,8 @@
 "use client"
 
+import Link from "next/link"
 import { useState } from "react"
-import { Scissors, Palette, Sparkles, Hand, Eye, Gem, Phone, HelpCircle } from "lucide-react"
+import { Scissors, Palette, Sparkles, Hand, Eye, Gem, Phone, HelpCircle, ArrowRight } from "lucide-react"
 import { useCTA } from "@/components/providers/cta-provider"
 import ScrollAnimate from "@/components/ui/scroll-animate"
 
@@ -9,6 +10,7 @@ const SERVICE_CATEGORIES = [
   {
     icon: Scissors,
     title: "Hair Design & Structural Maintenance",
+    href: "/hairdresser",
     services: [
       "The Works (Shampoo, Haircut & Blow-dry Style)",
       "Standard Haircut",
@@ -22,6 +24,7 @@ const SERVICE_CATEGORIES = [
   {
     icon: Sparkles,
     title: "Thermal & Protective Styling",
+    href: "/hair-salon",
     services: [
       "Dominican Blowout / Blow Dry Style",
       "Flat Iron Finish",
@@ -36,6 +39,7 @@ const SERVICE_CATEGORIES = [
   {
     icon: Palette,
     title: "Chemical & Color Treatments",
+    href: "/hair-salon",
     services: [
       "Custom Color (Consultation Required)",
       "Root Color (Including INOA Ammonia-Free)",
@@ -47,6 +51,7 @@ const SERVICE_CATEGORIES = [
   {
     icon: Hand,
     title: "Scalp & Hair Therapy",
+    href: "/hair-salon",
     services: [
       "Deep Conditioning (Imported Lipid Products)",
       "Tea Tree Special (Scalp Treatment & Massage)",
@@ -56,6 +61,7 @@ const SERVICE_CATEGORIES = [
   {
     icon: Eye,
     title: "Professional Esthetics",
+    href: "/beauty-salon",
     services: [
       "Threading",
       "Eyebrow Shaping & Tinting",
@@ -68,6 +74,7 @@ const SERVICE_CATEGORIES = [
   {
     icon: Gem,
     title: "Nail Technology",
+    href: "/beauty-salon",
     services: [
       "Manicures & Pedicures",
       "Gel Nails & Gel Extensions",
@@ -133,35 +140,49 @@ export default function ServicesSection() {
             const Icon = category.icon
             return (
               <ScrollAnimate key={category.title} delay={index * 0.1}>
-                <div className="group h-full rounded-xl border bg-zinc-950/40 backdrop-blur-md p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                  style={{ borderColor: "rgba(245, 245, 240, 0.15)" }}
-                  onMouseEnter={(e) => (e.currentTarget.style.borderColor = "rgba(212, 175, 55, 0.5)")}
-                  onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgba(245, 245, 240, 0.15)")}
-                >
-                  {/* Card Header */}
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-zinc-950 text-champagne">
-                      <Icon className="h-5 w-5" />
+                <Link href={category.href} className="group h-full block">
+                  <div className="h-full rounded-xl border bg-zinc-950/40 backdrop-blur-md p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg cursor-pointer"
+                    style={{ borderColor: "rgba(245, 245, 240, 0.15)" }}
+                    onMouseEnter={(e) => (e.currentTarget.style.borderColor = "rgba(212, 175, 55, 0.5)")}
+                    onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgba(245, 245, 240, 0.15)")}
+                  >
+                    {/* Card Header */}
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-zinc-950 text-champagne">
+                        <Icon className="h-5 w-5" />
+                      </div>
+                      <h3 className="font-serif text-lg font-semibold leading-snug" style={{ color: "rgb(245, 245, 240)" }}>
+                        {category.title}
+                      </h3>
                     </div>
-                    <h3 className="font-serif text-lg font-semibold leading-snug" style={{ color: "rgb(245, 245, 240)" }}>
-                      {category.title}
-                    </h3>
-                  </div>
 
-                  {/* Service List */}
-                  <ul className="flex flex-col gap-2">
-                    {category.services.map((service) => (
-                      <li
-                        key={service}
-                        className="flex items-start gap-2 text-sm"
-                        style={{ color: "var(--text-muted)" }}
-                      >
-                        <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-champagne" />
-                        {service}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                    {/* Service List */}
+                    <ul className="flex flex-col gap-2 mb-6">
+                      {category.services.slice(0, 4).map((service) => (
+                        <li
+                          key={service}
+                          className="flex items-start gap-2 text-sm"
+                          style={{ color: "var(--text-muted)" }}
+                        >
+                          <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-champagne" />
+                          {service}
+                        </li>
+                      ))}
+                      {category.services.length > 4 && (
+                        <li className="flex items-start gap-2 text-sm" style={{ color: "rgb(212, 175, 55)" }}>
+                          <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-champagne" />
+                          +{category.services.length - 4} more services
+                        </li>
+                      )}
+                    </ul>
+
+                    {/* View More Link */}
+                    <div className="flex items-center gap-2 text-sm font-semibold transition-colors group-hover:text-champagne" style={{ color: "rgb(212, 175, 55)" }}>
+                      <span>View Services</span>
+                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </div>
+                  </div>
+                </Link>
               </ScrollAnimate>
             )
           })}
