@@ -15,16 +15,9 @@ export const metadata: Metadata = {
   description:
     "Consentida's Dominican Hair Salon by Triny: Premium hair salon at 5226 Stone Mountain Hwy, Stone Mountain GA 30087. 21+ years of expertise in hair coloring, Dominican blowouts, silk press, keratin treatments, scalp restoration & hair styling. Call 787-964-1826.",
   keywords: [
-    "Dominican Salon Stone Mountain",
-    "Hair Salon Stone Mountain GA",
-    "Beauty Salon near me",
-    "Silk Press Stone Mountain",
-    "Dominican Blowout Georgia",
-    "Hair Coloring Lithonia",
-    "Keratin Treatment Tucker GA",
-    "Balayage Clarkston",
-    "Eyebrow Threading Stone Mountain",
-    "Best Hairdresser near me",
+    "Beauty Salon",
+    "Hair Salon",
+    "Hairdresser",
   ],
   openGraph: {
     title: "BEST Dominican Beauty Salon in Stone Mountain GA | Consentida's by Triny",
