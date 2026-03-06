@@ -6,6 +6,17 @@ export const metadata: Metadata = {
   title: "Hair Salon in Stone Mountain GA | Consentida's by Triny",
   description:
     "Looking for Hair Salon in Stone Mountain, GA? Consentida's Dominican Salon By Triny offers expert Hair Salon services near you. Call 787-964-1826.",
+  keywords: [
+    "Hair Salon Stone Mountain GA",
+    "Dominican Hair Salon near me",
+    "Balayage Stone Mountain",
+    "Hair Coloring Lithonia GA",
+    "Keratin Treatment Tucker",
+    "Highlights Clarkston GA",
+  ],
+  alternates: {
+    canonical: "https://consentidassalon.com/hair-salon",
+  },
 }
 
 const jsonLd = {
@@ -16,13 +27,13 @@ const jsonLd = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://v0-triny.vercel.app/",
+      item: "https://consentidassalon.com/",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Hair Salon",
-      item: "https://v0-triny.vercel.app/hair-salon",
+      item: "https://consentidassalon.com/hair-salon",
     },
   ],
 }

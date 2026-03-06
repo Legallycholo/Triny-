@@ -5,6 +5,8 @@ export const metadata: Metadata = {
   title: "Eyelash Extensions in Stone Mountain GA | Consentida's by Triny",
   description:
     "Expert Eyelash Extensions in Stone Mountain, GA near you. Consentida's Dominican Salon By Triny — 21+ years of experience. Call 787-964-1826 to book.",
+  keywords: ["Eyelash Extensions Stone Mountain GA", "Lash Extensions near me", "Volume Lashes Lithonia", "Classic Lashes Georgia"],
+  alternates: { canonical: "https://consentidassalon.com/beauty-salon/eyelash-extensions" },
 }
 
 const jsonLd = {
@@ -13,15 +15,15 @@ const jsonLd = {
     {
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://v0-triny.vercel.app/" },
-        { "@type": "ListItem", position: 2, name: "Beauty Salon", item: "https://v0-triny.vercel.app/beauty-salon" },
-        { "@type": "ListItem", position: 3, name: "Eyelash Extensions", item: "https://v0-triny.vercel.app/beauty-salon/eyelash-extensions" },
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://consentidassalon.com/" },
+        { "@type": "ListItem", position: 2, name: "Beauty Salon", item: "https://consentidassalon.com/beauty-salon" },
+        { "@type": "ListItem", position: 3, name: "Eyelash Extensions", item: "https://consentidassalon.com/beauty-salon/eyelash-extensions" },
       ],
     },
     {
       "@type": "LocalBusiness",
       name: "Consentida's Dominican Salon By Triny",
-      url: "https://v0-triny.vercel.app/",
+      url: "https://consentidassalon.com/",
       telephone: "+17879641826",
       address: {
         "@type": "PostalAddress",
@@ -31,7 +33,7 @@ const jsonLd = {
         postalCode: "30087",
         addressCountry: "US",
       },
-      geo: { "@type": "GeoCoordinates", latitude: 33.8073, longitude: -84.1701 },
+      geo: { "@type": "GeoCoordinates", latitude: 33.8118, longitude: -84.0722 },
       priceRange: "$$",
     },
   ],

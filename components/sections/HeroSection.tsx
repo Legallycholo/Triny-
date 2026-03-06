@@ -49,7 +49,7 @@ export default function HeroSection() {
               className="btn-glow celestial-glow flex items-center gap-2.5 rounded-full px-8 py-4 text-base font-semibold tracking-wide"
             >
               <Phone className="h-5 w-5" />
-              <span>Call Now: Secure Your Consultation</span>
+              <span>Book Your Consultation<br className="hidden sm:block" />Call Today</span>
             </button>
 
             {/* Secondary CTA - Open Dialog */}

@@ -34,7 +34,7 @@ export default function Footer() {
                 className="btn-glow flex items-center gap-2.5 rounded-full px-10 py-4 text-lg font-semibold tracking-wide"
               >
                 <Phone className="h-5 w-5" />
-                <span>Call Now: 787-964-1826</span>
+                <span>Book Your Consultation<br className="hidden sm:block" />Call Today</span>
               </button>
             </div>
 
