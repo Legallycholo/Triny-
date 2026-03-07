@@ -4,7 +4,12 @@ import { Phone, MessageCircle } from "lucide-react"
 import { useCTA } from "@/components/providers/cta-provider"
 import HeroCarousel from "./HeroCarousel"
 
-export default function HeroSection() {
+interface HeroSectionProps {
+  cityName?: string;
+  isCityPage?: boolean;
+}
+
+export default function HeroSection({ cityName = "Stone Mountain", isCityPage = false }: HeroSectionProps) {
   const { openCTA } = useCTA()
   return (
     <section
@@ -25,20 +30,32 @@ export default function HeroSection() {
             Beauty{" "}
             <span style={{ color: "rgb(212, 175, 55)" }}>Salon</span>{" "}
             <br className="hidden lg:block" />
-            in Stone Mountain.
+            in {cityName}.
           </h1>
 
           {/* Sub-headline */}
           <p className="mt-5 max-w-lg text-base leading-relaxed text-pretty sm:text-lg" style={{ color: "var(--text-secondary)" }}>
-            {"Hair salon. Hairdresser "}
-            <span className="kw-gold">Haircut</span>
-            {", "}
-            <span className="kw-violet">Blayage</span>
-            {", and "}
-            <span className="kw-gold">Keratin treatment</span>
-            {". Where every client is "}
-            <span className="kw-violet">consentida</span>
-            {" \u2014 spoiled with care."}
+            {isCityPage ? (
+              <>
+                Beauty salon serving <span className="text-champagne font-medium">{cityName}</span>, GA and surrounding areas. Haircut, Blowout, Keratin treatment, and Dominican blowout. Where every client is <span className="italic" style={{ color: "rgb(212, 175, 55)" }}>consentida</span> — spoiled with care.
+                <br />
+                <span className="mt-2 block text-sm opacity-80">
+                  Conveniently located at 5226 Stone Mountain Hwy Suite D, Stone Mountain GA 30087 — serving {cityName} and surrounding communities.
+                </span>
+              </>
+            ) : (
+              <>
+                {"Hair salon. Hairdresser "}
+                <span className="kw-gold">Haircut</span>
+                {", "}
+                <span className="kw-violet">Blayage</span>
+                {", and "}
+                <span className="kw-gold">Keratin treatment</span>
+                {". Where every client is "}
+                <span className="kw-violet">consentida</span>
+                {" \u2014 spoiled with care."}
+              </>
+            )}
           </p>
 
           {/* CTA Buttons */}

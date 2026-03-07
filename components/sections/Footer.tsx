@@ -117,6 +117,33 @@ export default function Footer() {
           </Link>
         </div>
 
+        {/* City Location Links */}
+        <div className="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-center max-w-3xl mx-auto">
+          {[
+            { name: "Lilburn", slug: "lilburn" },
+            { name: "Snellville", slug: "snellville" },
+            { name: "Redan", slug: "redan" },
+            { name: "Lithonia", slug: "lithonia" },
+            { name: "Decatur", slug: "decatur" },
+            { name: "Tucker", slug: "tucker" },
+            { name: "Conyers", slug: "conyers" },
+            { name: "Lawrenceville", slug: "lawrenceville" },
+          ].map((city, idx, arr) => (
+            <div key={city.slug} className="flex items-center gap-4">
+              <Link
+                href={`/beauty-salon-${city.slug}`}
+                className="text-xs transition-colors hover:opacity-80"
+                style={{ color: "var(--text-muted)" }}
+              >
+                Beauty Salon {city.name}
+              </Link>
+              {idx < arr.length - 1 && (
+                <span className="text-xs" style={{ color: "var(--text-tertiary)" }}>·</span>
+              )}
+            </div>
+          ))}
+        </div>
+
         {/* Copyright */}
         <div className="mt-8 border-t pt-6 text-center" style={{ borderColor: "#27272A" }}>
           <p className="text-xs" style={{ color: "var(--text-tertiary)" }}>
