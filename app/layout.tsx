@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono, Playfair_Display, Syne } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import GalaxyBackground from '@/components/ui/galaxy-background'
 import { CTAProvider } from '@/components/providers/cta-provider'
 import './globals.css'
@@ -120,6 +121,7 @@ export default function RootLayout({
           </div>
         </CTAProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
